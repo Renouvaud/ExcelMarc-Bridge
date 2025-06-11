@@ -1,0 +1,8 @@
+api_keys.py
+credentials.py
+.metals
+.vscode
+.git
+test_files/*
+__pycache__
+convert_xlsx_to_marc21.code-workspace

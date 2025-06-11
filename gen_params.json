@@ -1,0 +1,141 @@
+{    
+    "xlsx_file_input": "REQ_Export_avec_localisations_test2l",
+    "xml_file_output": "REQ_Export_avec_localisations_cleaned_conv",
+    "xlsx_file_loc": "mapping_loc",
+    "global_dict":{
+        "codes_bib": {
+            "code_bib_alma" : "etoy",
+            "code_bibliotheque_notices" : "vdetoy",
+            "indice_classification" :  "cetoy",
+            "code_selection" : "nwetoy",
+            "code035": "LUETOY"
+        },
+        "lang008": {
+            "EN": "eng",
+            "FR": "fre",
+            "DE": "ger",
+            "ES": "spa",
+            "IT": "ita",
+            "NL": "dut",
+            "PT": "por",
+            "NE": "nep"
+        }
+    },
+    "mapping":[
+        ["leader", "02167nrm a2200457 a 4500"],
+        ["007",
+            ["pos0-5", "k|||m|"]
+        ],
+        ["008",            
+            ["pos0-6", "      s"],
+            ["date1", "if|re.match('[0-9]{4}', '%Annee_sortie')|%Annee_sortie|    "],
+            ["date2", "    "],
+            ["pays", "xx "],
+            ["pos18-34", "|||        ||||||"],
+            ["lang", "if|'%Langue' in #lang008.keys()|#lang008['%Langue']"],
+            ["lang", "elif|'/' in '%Langue'|mul|fre"],
+            ["pos38-39", " d"]
+        ],
+        ["0243_",
+            ["a", "%EAN13"]
+        ],
+        ["0242_",
+            ["a", "if|''!=%Reference_Editeur|'%Reference_Editeur %Editeur'"]
+        ],
+        ["035",
+            ["a", "'(#code035) %IDJeu'"]
+        ],
+        ["040",
+            ["a", "RNV %code_bib_alma"]
+        ],
+        ["041",
+            ["a", "for|%Langue.split('/')|%s in #lang008.keys|#lang008[%s]"]
+        ],
+        ["100#_",
+            ["a", "split(',')[0]|%Jeux_Createur"],
+            ["d", "split(',')[1]|%Jeux_Createur"]
+        ],
+        ["245##",
+            ["a", "%Nom_jeu"]
+        ],
+        ["246_3",
+            ["a", "%Jeux_Nom_Traduction"]            
+        ],
+        ["264",
+            ["a", "[Lieu de publication non identifié]"],
+            ["b", "if|''!=%Editeur?%Editeur|'[éditeur non identifié]'"],
+            ["c", "if|''!=%Annee_sortie?%Annee_sortie|'[date de publication non identifiée]'"]
+        ],
+        ["300",
+            ["a", "if|'bo[iî]te' in %Contenu?'1 jeu dans une boîte'"]
+        ],
+        ["336",
+            ["b", "tdf"],
+            ["2", "rdacontent"]
+        ],
+        ["337",
+            ["b", "n"],
+            ["2", "rdamedia"]
+        ],
+        ["338",
+            ["b", "nr"],
+            ["2", "rdacarrier"]
+        ],
+        ["500",
+            ["a", "if|''!=%Age_min?'Age min : %Age_min'"]
+        ],
+        ["500",
+            ["a", "if|''!=%Nbre_joueurs?'Nombre de joueurs·euses : %Nbre_joueurs'"]
+        ],
+        ["500",
+            ["a", "if|''!=%Duree?'Durée de la partie : %Duree'"],
+            ["_comment", "déplacer dans champ recherchable --> voir avec Alexandra"]
+        ],
+        ["5050_",
+            ["a", "%Contenu"]
+        ],
+        ["5208_",
+            ["a", "%Resume"],
+            ["9", "'#code_bib_alma/'","today_date[mm.YYYY]"]
+        ],
+        ["700",
+            ["a", "split(',')[0]|%Jeux_Illustrateur"], 
+            ["d", "split(',')[1]|%Jeux_Illustrateur"]
+        ],
+        ["972",
+            ["a", "#code_bibliotheque_notices"]
+        ],
+        ["985",
+            ["2", "#indice_classification"],
+            ["a", ""],
+            ["9", "local"]
+        ],
+        ["998",
+            ["998", "ImportPython/#code_bib_alma"]
+        ],
+        ["holding_data",
+            ["leader", "     nx  a22     1n 4500"],
+            ["852",
+                ["b", "%code_bib_alma"],
+                ["c", "if|%Localisation_Alma in %localisations_map?%localisations_code|%localisation_zero"],
+                ["h", "%ESAR_secondaire"]
+            
+            ],
+            ["866",
+                ["a", ""]
+            ]
+        ],
+        ["item_data",
+            ["policy", "3000"],
+            ["item_location", "if|%Localisation_Alma in %localisations_map?%localisations_code|%localisation_zero"],
+            ["arrival_date", "format_date[]|%"],
+            ["barcode", "'etoy %Numero_jeu'"],
+            ["description", ""],
+            ["alternative_call_number", ""],
+            ["alternative_call_number_type", "8"],
+            ["physical_material_type", "OTHER"],
+            ["internal_note_1", "%Fournisseur"],
+            ["_comment", "liste complètes des champs possibles pour l'item : https://developers.exlibrisgroup.com/alma/apis/docs/xsd/rest_item.xsd/?tags=PUT#item_data"]
+        ]
+    ]
+} 

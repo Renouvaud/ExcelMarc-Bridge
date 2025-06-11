@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection xmlns:marc="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <record>
+      <leader>02167nrm a2200457 a 4500</leader>
+      <controlfield tag="007">k|||m|</controlfield>
+      <controlfield tag="008">      s2020    xx |||        ||||||eng d</controlfield>
+   </record>
+   <record>
+      <leader>02167nrm a2200457 a 4500</leader>
+      <controlfield tag="007">k|||m|</controlfield>
+      <controlfield tag="008">      s        xx |||        ||||||ger d</controlfield>
+   </record>
+</collection>
