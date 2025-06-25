@@ -3,6 +3,8 @@ credentials.py
 .metals
 .vscode
 .git
+*.xlsx
+*.xml
 test_files/*
 __pycache__
 convert_xlsx_to_marc21.code-workspace
