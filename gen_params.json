@@ -1,7 +1,8 @@
 {    
-    "xlsx_file_input": "REQ_Export_avec_localisations_cleaned",
-    "xml_file_output": "REQ_Export_avec_localisations_cleaned_conv",
+    "xlsx_file_input": "REQ_test_interm_16juin25_Fichier-sortie-Talaxie-pour-NP_numloc_20250630_10l",
+    "xml_file_output": "REQ_test_interm_16juin25_Fichier-sortie-Talaxie-pour-NP_numloc_20250630_10l",
     "xlsx_file_loc": "mapping_loc",
+    "xlsx_folder" : "excel_comp_files",
     "global_dict":{
         "codes_bib": {
             "code_bib_alma" : "etoy",
@@ -24,6 +25,17 @@
             "0.5": "6 mois",
             "1.5": "18 mois",
             "2.5": "2 ans et demi"
+        },
+        "conv_aut_code": {
+            "Auteur": "aut",
+            "Autre": "oth",
+            "Concepteur": "ccp",
+            "Créateur": "cre",
+            "Design": "dsr",
+            "Graphiste":"grt",
+            "Illustrateur":"ill",
+            "Rédacteur":"red",
+            "Rédaction":"red"
         }
     },
     "mapping":[
@@ -44,7 +56,7 @@
         ["0243_",
             ["a", "@EAN13"]
         ],
-        ["0242_",
+        ["02852",
             ["a", "if§''!=@Reference_Editeur§@Reference_Editeur @Editeur"],
             ["_comment", "fonction if description"]
         ],
@@ -56,18 +68,14 @@
         ],
         ["041",
             ["a", "for§@Langue.split('/')§if§%s in #lang008.keys()§#lang008[%s]"]
-        ],
-        ["100",
-            ["a", "@Jeux_Createur"],
-            ["d", "if§len(@Jeux_Createur.split(';'))>1§@Jeux_Createur.split(';')[1]"]
-        ],
+        ],     
         ["245",
             ["a", "@Nom_jeu"]
         ],
         ["246_3",
             ["a", "@Jeux_Nom_Traduction"]            
         ],
-        ["264",
+        ["264_2",
             ["a", "[Lieu de publication non identifié] : "],
             ["b", "if§''!=@Editeur§@Editeur, §[éditeur non identifié], "],
             ["c", "if§re.match('[0-9]{2}[0-9\\?]{2}', @Annee_sortie)§@Annee_sortie§[date de publication non identifiée]"]
@@ -93,11 +101,36 @@
             ["a", "elif§re.search('^[012].5$', @Age_min)§Age min : #conv_age[@Age_min]"]
         ],
         ["500",
+            ["a", "if§''!=@Age_max and @Age_max!='99' and @Age_max != '97' and @Age_max != '77'§Age max : @Age_max"]
+        ],
+        ["500",
             ["a", "if§''!=@Nbre_joueurs§Nombre de joueurs·euses : @Nbre_joueurs"]
         ],
         ["500",
             ["a", "if§''!=@Duree§Durée de la partie : @Duree"],
             ["_comment", "déplacer dans champ recherchable --> voir avec Alexandra"]
+        ],
+        ["500",
+            ["a", "if§''!=@Mecanique§Mécanique : @Mecanique"]
+        ],
+        ["500",
+            ["a", "if§''!=@Interaction§Interaction : @Interaction"]
+        ],
+        ["500",
+            ["a", "if§''!=@Theme§Thème : @Theme"],
+            ["_comment", "il me semble que la thématique n'avait pas besoin d'être reprise ou sinon sous forme d'une sélection thématique?"]
+        ],
+        ["500",
+            ["a", "if§''!=@DYS§Jeu adapté aux troubles DYS : @DYS"]
+        ],
+        ["500",
+            ["a", "if§re.match('[0-9]+ *[x/] *[0-9]+', @Taille_poids)§Dimensions : @Taille_poids"],
+            ["a", "elif§'kg' in @Taille_poids§Poids : @Taille_poids"],
+            ["a", "elif§'cm' in @Taille_poids§Taille : @Taille_poids"],
+            ["a", "elif§''!=@Taille_poids§Taille/poids adapté pour : @Taille_poids"]
+        ],
+        ["500",
+            ["a", "if§''!=@Poids§Poids : @Poids"]
         ],
         ["5050_",
             ["a", "@Contenu"]
@@ -106,15 +139,31 @@
             ["a", "@Resume"],
             ["9", "if§@Resume!=''§#codes_bib['code_bibliotheque_notices']/today_date(%m.%Y)"]
         ],
-        ["700",
-            ["a", "@Jeux_Illustrateur"]
+        ["521",
+            ["a", "if§''!=@Niveau§Niveau : @Niveau"],
+            ["b", "if§''!=@Niveau§#codes_bib['code_bibliotheque_notices']/today_date(%m.%Y)"]
+        ],
+        ["700", "forExcel§#auteurs_liste.iterrows()§if§%sIDJeux%s == @IDJeux",
+            ["a", "%sAuteurs_Nom%s, %sAuteurs_Prenom%s"],
+            ["4", "%sFonction%s"]
+        ],
+        ["85642",
+            ["3", "if§''!=@Video_Regle§Vidéo"],
+            ["u", "if§''!=@Video_Regle§@Video_Regle"],
+            ["z", "if§''!=@Video_Regle§Règles du jeu"]
         ],
         ["972",
             ["a", "#codes_bib['code_bibliotheque_notices']"]
         ],
+        ["905",
+            ["a", "if§@Valeur_Specifique=='1'§etoyjcoeur"],
+            ["b", "if§@Valeur_Specifique=='1'§today_date(%y%m)"]
+        ],
         ["985",
             ["2", "#codes_bib['indice_classification']"],
-            ["a", ""],
+            ["a", "if§''!=@a985§@a985"],
+            ["b", "if§''!=@b985§@b985"],
+            ["c", "if§''!=@ESAR_secondaire§@ESAR_secondaire"],
             ["9", "local"]
         ],
         ["998",
@@ -122,26 +171,34 @@
         ],
         ["holding_data",
             ["leader", "     nx  a22     1n 4500"],
-            ["_comment", "852",
+            ["852",
                 ["b", "#codes_bib['code_bib_alma']"],
-                ["_comment", "c", "if§%Localisation_Alma in %localisations_map§%localisations_code|%localisation_zero"],
+                ["c", "@Localisation"],
                 ["h", "@ESAR_secondaire"]
-            
             ],
-            ["866",
-                ["a", ""]
+            ["866_0",
+                ["a", "if§''!=@Pces_Rechanges§@Pces_Rechanges"]
             ]
         ],
         ["item_data",
-            ["policy", "3000"],
-            ["_comment", "item_location", "if§%Localisation_Alma in %localisations_map§%localisations_code§%localisation_zero"],
-            ["arrival_date", "format_date(@Date_achat, %a %b %d %H:%M:%S %Z %Y, %Y-%m-%d)"],
-            ["barcode", "'etoy @Numero_jeu'"],
-            ["description", ""],
             ["alternative_call_number", ""],
             ["alternative_call_number_type", "8"],
-            ["physical_material_type", "OTHER"],
+            ["arrival_date", "format_date(@Date_achat, %Y-%m-%d %H:%M:%S, %Y-%m-%d)"],
+            ["_comment", "ancienne version format Date_achat", "arrival_date", "format_date(@Date_achat, %a %b %d %H:%M:%S %Z %Y, %Y-%m-%d)"],
+            ["barcode", "EY@Numero_jeu"],
+            ["description", ""],
+            ["fulfillment_note", "@Remarque_location"],
+            ["inventory_date", "format_date(@Date_modif, %Y-%m-%d %H:%M:%S, %Y-%m-%d)"],
+            ["inventory_price", "@Prix"],
             ["internal_note_1", "@Fournisseur"],
+            ["internal_note_2", "@Remarque"],
+            ["internal_note_3", "@Jeux_Tagge"],
+            ["item_location", "@Localisation"],
+            ["physical_material_type", "OTHER"],
+            ["_comment", "voir avec JR si Game n'est pas que pour les jeux vidéo, si ok utiliser ce qui suit ", "physical_material_type", "GAME"],
+            ["physical_condition", "if§@Etat!='Disponible'§@Etat"],
+            ["policy", "3000"],
+            ["public_note", "@Jeux_perso"],
             ["_comment", "liste complètes des champs possibles pour l'item : https://developers.exlibrisgroup.com/alma/apis/docs/xsd/rest_item.xsd/?tags=PUT#item_data"]
         ]
     ]

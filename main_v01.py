@@ -1,7 +1,11 @@
 """ Local functions """
+from asyncio.windows_events import NULL
+from queue import Empty
 from general import *
-from complete_fields import *
+#from complete_fields import *
 from global_dict import *
+import global_dict
+from fields_in_rec import *
 
 """ Python libraries """
 import pandas as pd
@@ -25,8 +29,18 @@ if __name__ == "__main__":
     gen_param_file = "gen_params"
     gen_params = read_json(f"./{gen_param_file}.json")
     mapping = gen_params['mapping']
+
+    # Import des dictionnaires complémentaires
     glob_dict = gen_params['global_dict']
     define_glob_dict(glob_dict)
+
+    # Import des fichiers complémentaires
+    folder = gen_params['xlsx_folder']
+    define_glob_excel_file_liste(folder)
+
+    # Import det pour ind 245
+    det_dict = read_json("./ind245.json")
+    define_glob_det_dict(det_dict)
 
     # Import nom fichier de sortie
     xml_output_file = f"{gen_params['xml_file_output']}.xml"
@@ -44,71 +58,39 @@ if __name__ == "__main__":
     })
     # Pour chaque ligne du fichier excel, création d'un record
     printed_col = []
+    num = 0
     for _, row in df.iterrows():
+        num +=1
         record = ET.SubElement(collection, 'record')
-
         # Remplacement des carctères spéciaux utilisés dans gen_params.json dans la ligne traitée
         for row_key, row_val in row.items():
             if type(row_val)==str and re.search("[#@]", row_val):
                 row_val = row_val.replace("#", "<diese>")
                 row_val = row_val.replace("@", "<at>")
                 row[row_key] = row_val
-            if row_key not in printed_col and row_val not in ["nan", "", None, nan, 0]:
-                print(f"{row_key}\t\t{row_val}")
+            if row_key not in printed_col and row_val != None and str(row_val).lower().strip() not in ["nan", ""]:
+                print(f"{row_key}\t\t{row_val}\t\t{type(row_val)}")
                 printed_col.append(row_key)
 
         # Pour chaque élément de la liste mapping définie dans le fichier json
         for map_field in mapping:
 
-            # Ajout leader au record
-            if not isinstance(map_field[1], list):
-                record_el = ET.SubElement(record, map_field[0])
-                record_el.text = map_field[1]
+            #cration leader, controlfiel et datafield with subfield
+            create_fields_in_rec(row, record, map_field)
 
-            # Ajout controlfields 00X au record
-            elif map_field[0].startswith("00"):
-                controlfield = ET.SubElement(record, "controlfield")
-                controlfield.attrib = attrib={'tag': map_field[0]}
-                controlfield_list = []
-                for pos in map_field[1:]:
-                    if pos[0] == "_comment":
-                        continue
-                    temp_val = convert_field_content(row, pos[1])
-                    controlfield_list.append(temp_val)
-                controlfield.text = "".join(controlfield_list)
-
-            # Ajout datafields au record
-            elif re.search('[0-9]{3}[0-9_#]{0,2}', map_field[0]):
-                match_tag = re.search('([0-9]{3})(([0-9_#])([0-9_#]))?', map_field[0])
-                tag = match_tag.group(1)
-                ind1 = get_ind(match_tag.group(3))
-                ind2 = get_ind(match_tag.group(4))
-                datafield = ET.Element('datafield', attrib={'tag': tag, 'ind1': ind1, 'ind2': ind2})
-
-                for sf in map_field[1:]:
-                    if sf[0] == "_comment":
-                        continue
-                    if sf[1].startswith("for§"):
-                        # exemple de sf avec for : ["a", "for§'@Langue'.split('/')§if§%s in #lang008.keys§#lang008[%s]"]
-                        # sf[1] = "for§'@Langue'.split('/')§if§%s in #lang008.keys§#lang008[%s]"
-                        sf1_list = sf[1].split('§') # = "for", "'@Langue'.split('/')", "if", "%s in #lang008.keys§#lang008[%s]"
-                        boucle = sf1_list[1] # = '@Langue'.split('/')
-                        mapped_value = map_value(row, sf1_list[1], cond_var=True, cond_glob=True) # = 'EN/FR/DE'.split('/')
-                        # cette boucle permet de créer plusieurs sous-champs avec le même code en bouclant sur une liste
-                        # exemple : 041 $a eng $a fre $a ger
-                        for el in eval(mapped_value):
-                            if el == None or el == '':
-                                continue
-                            if len(sf1_list)<2:
-                                message_erreur_for(tag, sf)
-                                exit()
-                            func_str = "§".join(sf1_list[2:])
-                            add_subfield(datafield, row, sf[0], func_str.replace("%s", f"'{el}'"))
-                    else:
-                        add_subfield(datafield, row, sf[0], sf[1])
-                record.append(datafield)            
-            #ET.dump(record)
-
+            # Ajout holding au record
+            if 'holding_data' == map_field[0]:
+                record_el = create_not_rec_field(record, map_field[0])
+                for map_el in map_field[1:]:
+                    create_fields_in_rec(row, record_el, map_el)
+            # Ajout item au record
+            if 'item_data' == map_field[0]:
+                record_el = create_not_rec_field(record, map_field[0])
+                create_subfield(row, record_el, map_field[1:], is_datafield=False)
+        if num in [1, 10, 100]:
+            print(f"ligne {num} traitée")
+        elif num % 500 == 0:
+            print("traitement toujours en cours, ligne {num} traitée")
     # Génération du fichier XML
     tree = ET.ElementTree(collection)
     ET.indent(tree, space="   ", level=0)  # Pour Python 3.9+
