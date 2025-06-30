@@ -195,13 +195,16 @@ def convert_field_content(row, func_str):
         return apply_fct(row, funcargs, func_str)
     return map_value(row, func_str)
 
-def add_subfield(datafield, row, code, func_str):
+def add_subfield(element_field, row, code, func_str, is_datafield=True):
     mapped_value = convert_field_content(row, func_str)
     if mapped_value == None or mapped_value == '' or str(mapped_value).lower() == 'nan':
         return None
-    subfield = ET.SubElement(datafield, 'subfield', attrib={'code': code})
-    subfield.text = rpl_json_spe_caracter(mapped_value)
-    return subfield
+    if is_datafield:
+        subel = ET.SubElement(element_field, 'subfield', attrib={'code': code})
+    else:
+        subel = ET.SubElement(element_field, code)
+    subel.text = rpl_json_spe_caracter(mapped_value)
+    return subel
 
 def create_datafield(tag_ind):
     match = re.search('([0-9]{3})(([0-9_])([0-9_]))?', tag_ind)
@@ -310,7 +313,6 @@ def boucle_excel(row, boucle_eval, split_el_param, boucle_type, el_name, field, 
             subfields = create_subfield(row, datafield, list_of_sf_list, stop_to_match=True)
             if subfields != []:
                 element_field.append(datafield)
-    return element_field
 
 def boucle_py_dict(row, boucle_eval, split_el_param, boucle_type, el_name, field, element_field, is_sf=True, stop_to_match=False):
     if boucle_type != 'py_dict':
@@ -344,7 +346,6 @@ def boucle_py_dict(row, boucle_eval, split_el_param, boucle_type, el_name, field
             subfields = create_subfield(row, datafield, list_of_sf_list, stop_to_match=True)
             if subfields != []:
                 element_field.append(datafield)
-
         """
         sf = field
         func_str = "§".join(split_el_param[2:])
@@ -362,12 +363,12 @@ def create_subfield(row, element_field, list_of_sf_list, is_datafield=True, stop
         if is_datafield:
             el_name = element_field.attrib['tag']
         else :
-            el_name = element_field
+            el_name = element_field.tag
 
         is_boucle = for_eval_boucle(row, sf[1])
         # si pas de boucle
         if not is_boucle:
-            subfield = add_subfield(element_field, row, sf[0], sf[1])
+            subfield = add_subfield(element_field, row, sf[0], sf[1], is_datafield=is_datafield)
             if subfield != None:
                 subfields.append(subfield)
         else:

@@ -49,7 +49,9 @@ def create_fields_in_rec(row, record, map_field):
         boucle_type = is_boucle[2]
         boucle_excel(row, boucle_eval, sf1_list, boucle_type, tag, map_field, record, is_sf=False)
         boucle_py_dict(row, boucle_eval, sf1_list, boucle_type, tag, map_field, record, is_sf=False)
-
+        datafields = record.findall(f"datafield[@tag='{tag}']")
+        for datafield in datafields:
+            map_indicator(record, datafield)
 # Create holdings and items fields
 def create_not_rec_field(record, balise_name):
     record_el = ET.SubElement(record, balise_name)

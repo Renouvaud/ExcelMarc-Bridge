@@ -90,7 +90,7 @@ if __name__ == "__main__":
         if num in [1, 10, 100]:
             print(f"ligne {num} traitée")
         elif num % 500 == 0:
-            print("traitement toujours en cours, ligne {num} traitée")
+            print(f"traitement toujours en cours, ligne {num} traitée")
     # Génération du fichier XML
     tree = ET.ElementTree(collection)
     ET.indent(tree, space="   ", level=0)  # Pour Python 3.9+
