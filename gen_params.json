@@ -1,6 +1,6 @@
 {    
-    "xlsx_file_input": "REQ_test_interm_16juin25_Fichier-sortie-Talaxie-pour-NP_numloc_20250630_200l",
-    "xml_file_output": "REQ_test_interm_16juin25_Fichier-sortie-Talaxie-pour-NP_numloc_20250630_200l",
+    "xlsx_file_input": "REQ_test_interm_16juin25_Fichier-sortie-Talaxie-pour-NP_numloc_20250630_10l",
+    "xml_file_output": "REQ_test_interm_16juin25_Fichier-sortie-Talaxie-pour-NP_numloc_20250630_10l",
     "xlsx_file_loc": "mapping_loc",
     "xlsx_folder" : "excel_comp_files",
     "global_dict":{

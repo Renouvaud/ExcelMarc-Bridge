@@ -26,7 +26,11 @@ if __name__ == "__main__":
     log_time = datetime.now().strftime("%Y%m%d_%H%M%S")
 
     # Import json params file
+    ###################################################
+    # Update next line with new gen_params.json name  #
+    ###################################################
     gen_param_file = "gen_params"
+    ###################################################
     gen_params = read_json(f"./{gen_param_file}.json")
     mapping = gen_params['mapping']
 
