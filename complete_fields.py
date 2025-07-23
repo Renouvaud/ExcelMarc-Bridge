@@ -346,14 +346,6 @@ def boucle_py_dict(row, boucle_eval, split_el_param, boucle_type, el_name, field
             subfields = create_subfield(row, datafield, list_of_sf_list, stop_to_match=True)
             if subfields != []:
                 element_field.append(datafield)
-        """
-        sf = field
-        func_str = "§".join(split_el_param[2:])
-        if is_sf:
-            subfield = add_subfield(element_field, row, sf[0], func_str.replace("%s", f"'{el}'"))
-        else:
-            datafield = create_datafield(sf[0])
-            subfield = create_subfield(row, datafield, sf)"""
 
 def create_subfield(row, element_field, list_of_sf_list, is_datafield=True, stop_to_match=False):
     subfields = []

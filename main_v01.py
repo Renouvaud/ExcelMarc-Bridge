@@ -29,7 +29,7 @@ if __name__ == "__main__":
     ###################################################
     # Update next line with new gen_params.json name  #
     ###################################################
-    gen_param_file = "gen_params"
+    gen_param_file = "gen_params_crissier"
     ###################################################
     gen_params = read_json(f"./{gen_param_file}.json")
     mapping = gen_params['mapping']
@@ -78,10 +78,11 @@ if __name__ == "__main__":
 
         # Pour chaque élément de la liste mapping définie dans le fichier json
         for map_field in mapping:
-
-            #cration leader, controlfiel et datafield with subfield
+            # Ajout mmsid
+            if 'mms_id' == map_field[0]:
+                add_subfield(record, row, map_field[0], map_field[1], is_datafield=False)
+            # Ajout leader, controlfiel et datafield with subfield
             create_fields_in_rec(row, record, map_field)
-
             # Ajout holding au record
             if 'holding_data' == map_field[0]:
                 record_el = create_not_rec_field(record, map_field[0])

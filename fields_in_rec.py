@@ -24,7 +24,7 @@ def create_control_field(row, record, control_list):
 def create_fields_in_rec(row, record, map_field):
     match = re.search('([0-9]{3})[0-9_]{0,2}', map_field[0])
     # Ajout leader au record
-    if map_field[0] == 'leader' or map_field[0] == 'mms_id':
+    if map_field[0] == 'leader':
         create_element(record, map_field)
 
     # Ajout controlfields 00X au record

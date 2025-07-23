@@ -1,0 +1,18 @@
+{    
+    "xlsx_file_input": "CRIS_ex_fichier_info_a_completer_post_import",
+    "xml_file_output": "CRIS_ex_fichier_info_a_completer_post_import",
+    "xlsx_file_loc": "mapping_loc",
+    "xlsx_folder" : "excel_comp_files",
+    "global_dict":{
+        "codes_bib": {
+            "code_bib_alma" : "etoy",
+            "code_bibliotheque_notices" : "vdetoy",
+            "indice_classification" :  "cetoy",
+            "code_selection" : "nwetoy",
+            "code035": "LUETOY"
+        }
+    },
+    "mapping":[
+        ["mms_id", "@mmsid"]
+    ]
+} 
