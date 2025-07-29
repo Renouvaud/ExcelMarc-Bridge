@@ -29,7 +29,7 @@ if __name__ == "__main__":
     ###################################################
     # Update next line with new gen_params.json name  #
     ###################################################
-    gen_param_file = "gen_params_crissier"
+    gen_param_file = "gen_params"
     ###################################################
     gen_params = read_json(f"./{gen_param_file}.json")
     mapping = gen_params['mapping']

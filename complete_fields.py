@@ -230,6 +230,7 @@ def for_eval_boucle(row, el_params):
         boucle_type = 'excel'
     else:
         return None
+    breakpoint()
     # exemple de sf avec for : ["a", "for§'@Langue'.split('/')§if§%s in #lang008.keys§#lang008[%s]"]
     # sf[1] = "for§'@Langue'.split('/')§if§%s in #lang008.keys§#lang008[%s]"
     split_el_param = el_params.split('§') # = "for", "'@Langue'.split('/')", "if", "%s in #lang008.keys§#lang008[%s]"
@@ -256,6 +257,7 @@ def convert_excel_val(excel_element, params_boucle):
         pattern = "%s([A-Z-a-z0-9_]+)%s"
         list_el_to_replace = re.findall(pattern, arg)
         if list_el_to_replace == []:
+            func_arg.append(arg)
             continue
         for el_to_replace in list_el_to_replace:
             match = re.search(pattern, arg)

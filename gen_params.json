@@ -1,6 +1,6 @@
 {    
-    "xlsx_file_input": "CRIS_ex_fichier_info_a_completer_post_import",
-    "xml_file_output": "CRIS_ex_fichier_info_a_completer_post_import",
+    "xlsx_file_input": "REQ_test_interm_16juin25_Fichier-sortie-Talaxie-pour-NP_numloc_20250630_10l",
+    "xml_file_output": "REQ_test_interm_16juin25_Fichier-sortie-Talaxie-pour-NP_numloc_20250630_10l",
     "xlsx_file_loc": "mapping_loc",
     "xlsx_folder" : "excel_comp_files",
     "global_dict":{
@@ -147,7 +147,8 @@
         ],
         ["700", "forExcel§#auteurs_liste.iterrows()§if§%sIDJeux%s == @IDJeux",
             ["a", "%sAuteurs_Nom%s, %sAuteurs_Prenom%s"],
-            ["4", "#conv_aut_code[%sFonction%s]"]
+            ["4", "#conv_aut_code[%sFonction%s]"],
+            ["2", "test"]
         ],
         ["85642",
             ["3", "if§''!=@Video_Regle§Vidéo"],
