@@ -1,7 +1,6 @@
 {    
-    "xlsx_file_input": "REQ_test_interm_16juin25_Fichier-sortie-Talaxie-pour-NP_numloc_20250630_10l",
-    "xml_file_output": "REQ_test_interm_16juin25_Fichier-sortie-Talaxie-pour-NP_numloc_20250630_10l",
-    "xlsx_file_loc": "mapping_loc",
+    "xlsx_file_input": "input_file_example",
+    "xml_file_output": "output_file",
     "xlsx_folder" : "excel_comp_files",
     "global_dict":{
         "codes_bib": {
@@ -196,13 +195,12 @@
             ["internal_note_2", "@Remarque"],
             ["internal_note_3", "@Jeux_Tagge"],
             ["item_location", "@Localisation"],
-            ["physical_material_type", "GAME"],
-            ["_comment", "voir avec JR si Game n'est pas que pour les jeux vidéo, si ok utiliser ce qui suit ", "physical_material_type", "GAME"],
+            ["physical_material_type", "VIDEOGAME"],
             ["physical_condition", "if§@Etat!='Disponible'§@Etat"],
             ["policy", "3000"],
             ["public_note", ""],
             ["statistical_note_2", "@Fournisseur"],
-            ["_comment", "liste complètes des champs possibles pour l'item : https://developers.exlibrisgroup.com/alma/apis/docs/xsd/rest_item.xsd/?tags=PUT#item_data"]
+            ["_comment", "item field list : https://developers.exlibrisgroup.com/alma/apis/docs/xsd/rest_item.xsd/?tags=PUT#item_data"]
         ]
     ]
 } 
