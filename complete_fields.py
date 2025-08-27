@@ -1,19 +1,22 @@
+# Copyright 2025 Renouvaud
+# License GPL-3.0 or later (https://www.gnu.org/licenses/gpl-3.0)
+
 """ Python libraries """
-from cmath import nan
-from multiprocessing import Value
 import xml.etree.ElementTree as ET
 import re
 from datetime import datetime
-from indicators import *
 
 """ Local functions """
+from indicators import get_ind
 import global_dict
 
+# Replace special placeholders (used in JSON) back into characters
 def rpl_json_spe_caracter(ET_el):
     ET_el = ET_el.replace("<diese>", "#")
     ET_el = ET_el.replace("<at>", "@")
     return ET_el
 
+# Replace whitespace and punctuation based on regex rules and exceptions
 def convert_space_caracter(val, replacement, reg_rpl, not_inc={}):
     if len(not_inc)>0:
         val = re.sub(" *[\n\t\r] *", replacement, val)
@@ -26,6 +29,7 @@ def convert_space_caracter(val, replacement, reg_rpl, not_inc={}):
     val = re.sub(f"{reg_rpl}$", "", val)
     return val
 
+# Replace special characters in a string with a given replacement
 def convert_special_caracter(val, spe_car_list, remplacement):
     for spe_car in spe_car_list:
         match_spe = re.search(f"{spe_car}", val)
@@ -33,6 +37,7 @@ def convert_special_caracter(val, spe_car_list, remplacement):
             val = val.replace(match_spe.group(), remplacement)
     return val
 
+# Substitute variable references (like @col_name) in a string with row values
 def var_substitute(row, arg, cond=False):
     list_arg = []
     list_arg.append(arg.split("@")[0])
@@ -45,9 +50,9 @@ def var_substitute(row, arg, cond=False):
             col_val = str(row[col_name])
             if col_val == 'nan':
                 col_val = ''
-            # Remplacement de " par ' --> toujours même délémitations pour citation
+            # Replace " with ' to standardize quotes
             col_val = convert_special_caracter(col_val, ['"'], "'")
-            # Remplacement des retours à la ligne et tab en fonction de la colonne
+            # Replace line breaks and tabs depending on the column type
             if re.search("(contenu)|(505)", col_name.lower()) and not col_val.startswith("[Sommaire]"):
                 col_val = convert_space_caracter(col_val, " -- ", "( -- )+")
             elif re.search("r[éeè]sum[éeè]r?", col_name.lower()) or (re.search("som+aire", col_name.lower()) and col_val.startswith("[Sommaire]")):
@@ -55,13 +60,14 @@ def var_substitute(row, arg, cond=False):
             else :
                 col_val = convert_space_caracter(col_val, ". ", "(\. )+", not_inc={"\?":"?", "\.":".", "!":"!", ":":":", ",":",", ";":";"})            
             if cond:
-                # Pour condition attention à remplace les citations dans les données
+                # For conditions, remove single quotes inside data
                 col_val = convert_special_caracter(col_val, ["'"], " ")
                 list_arg.append(mot.replace(search_el, f"'{col_val}'"))
             else:
                 list_arg.append(mot.replace(search_el, col_val))
     return "".join(list_arg)  
 
+# Evaluate expressions referring to global_dict
 def glob_eval(el):
     if not el:
         return el
@@ -75,10 +81,11 @@ def glob_eval(el):
     try:
       return el.replace(match.group(), str(eval(match.group())))    
     except:
-        print("Erreur : impossible d'accéder à la variable globale")
-        print(f"Vérifier le fichier json pour : {el}")
+        print("Error: unable to access global variable")
+        print(f"Check JSON file for: {el}")
         exit()
 
+# Substitute placeholders (#...) with global_dict values
 def glob_substitute(arg, cond=False):
     list_arg = []
     list_arg.append(arg.split("#")[0])
@@ -90,12 +97,9 @@ def glob_substitute(arg, cond=False):
             else:
                 mot = glob_eval(mot)
                 list_arg.append(mot)
-                #match = re.search("global_dict\.[a-zA-Z_0-9]+((\['[a-zA-Z_0-9,]+'\])|(\.((keys)|(values)|(items))\(\)))?", mot)
-                #list_arg.append(mot.replace(match.group(), str(eval(match.group()))))
-            #match = re.search('(#)[a-zA-Z_0-9]+', mot)
-            #list_arg.append(mot.replace(match.group(1), "global_dict."))
     return "".join(list_arg)
 
+# If/elif functions with support for evaluating conditions dynamically
 def fct_if(condition, valTrue, valFalse=""):
     global last_if
     last_if = None
@@ -114,23 +118,13 @@ def fct_elif(condition, valTrue, valFalse=""):
         return glob_eval(valTrue)
     return glob_eval(valFalse)
 
-"""def fct_search():
-    pass
-
-def fct_format_date():
-    pass
-
-def fct_today_date():
-    pass
-
-def fct_split(pos, src):
-    return src.split()[pos]"""
-
+# Map a value by substituting variables and globals
 def map_value(row, value, cond_var=False, cond_glob=False):
     mapped_value = var_substitute(row, value, cond_var)
     mapped_value = glob_substitute(mapped_value, cond_glob)
     return mapped_value
 
+# Apply dynamic functions like if/elif on mapped values
 def apply_fct(row, funcargs, value):
     func_list = ["if", "elif"] 
     if any(funcargs[0].startswith(func) for func in func_list):
@@ -138,49 +132,46 @@ def apply_fct(row, funcargs, value):
         arg_list.append(map_value(row, funcargs[1], cond_var=True, cond_glob=True))
         [arg_list.append(map_value(row, arg, cond_var=False, cond_glob=True)) for arg in funcargs[2:]]
         func = "fct_" + funcargs[0]
-        #'fct_if':fct_if, 'fct_elif':fct_elif, 'fct_search':fct_search, 'fct_split':fct_split, 'fct_format_date':fct_format_date, 'fct_today_date':fct_today_date
-        return eval(func, {'fct_if':fct_if, 'fct_elif':fct_elif})(*arg_list) #arguments donnés sous forme de liste
+        return eval(func, {'fct_if':fct_if, 'fct_elif':fct_elif})(*arg_list)
     return map_value(row, value)
 
+# Convert a date string from one format to another
 def convert_date(date_str, d_format_entree, d_format_sortie):
-    # Convertir la chaîne en objet datetime
     try:
         date_obj = datetime.strptime(date_str, d_format_entree)
     except:
         return ""
-    # Changer le format en DD.MM.YYYY
     try :
         date_formatee = date_obj.strftime(d_format_sortie)
     except:
         return ""
     return date_formatee
 
+# Handle custom format_date function calls in strings
 def fct_format_date(row, content, reg_date):
     m_format_date = re.search(f"format_date\((@[a-zA-Z0-9_]+), ?({reg_date}), ?({reg_date})\)", content)
     if not m_format_date:
-        print("Erreur dans format_date")
-        print("ex : format_date(@col_name, <format date entrée>, <format date sortie>)")
-        print("exemple : format_date(@Date_achat, %a %b %d %H:%M:%S %Z %Y, %Y-%m-%d)")
-        print("détails des formats de date\n%a : Jour de la semaine abrégé (ex. : Mon)\n%b : Mois abrégé (ex. : Nov)\n%d : Jour du mois (ex. : 01)\n%H : Heure (format 24 heures, ex. : 00)\n%M : Minutes (ex. : 00)\n%S : Secondes (ex. : 00)\n%Z : Fuseau horaire (ex. : CET)\n%Y : Année avec siècle (ex. : 1993)")
+        print("Error in format_date")
+        print("Example: format_date(@col_name, <input format>, <output format>)")
         exit()
     value = var_substitute(row, m_format_date.group(1), cond=False)
     new_date = convert_date(value, m_format_date.group(2), m_format_date.group(3))
     return content.replace(m_format_date.group(), new_date)
 
+# Handle today_date function calls in strings
 def fct_today_date(content, reg_date):
     m_format_date = re.search(f"today_date\(({reg_date})\)", content)
     if not m_format_date:
-        print("Erreur dans today_date")
-        print("ex : today_date(<format date>)")
-        print("exemple : today_date(%m.%Y)")
-        print("détails des formats de date\n%a : Jour de la semaine abrégé (ex. : Mon)\n%b : Mois abrégé (ex. : Nov)\n%d : Jour du mois (ex. : 01)\n%H : Heure (format 24 heures, ex. : 00)\n%M : Minutes (ex. : 00)\n%S : Secondes (ex. : 00)\n%Z : Fuseau horaire (ex. : CET)\n%Y : Année avec siècle (ex. : 1993)")
+        print("Error in today_date")
+        print("Example: today_date(%m.%Y)")
         exit()
     try:
         new_date = datetime.now().strftime(m_format_date.group(1))
     except:
-        return "Erreur today_date ; format date en entrée invalide"        
+        return "Error today_date; invalid date format"               
     return content.replace(m_format_date.group(), new_date)
 
+# Convert a field string by applying variable substitution and functions
 def convert_field_content(row, func_str):
     fct_date_list = ["format_date","today_date"]
     for fct_date in fct_date_list:
@@ -195,6 +186,7 @@ def convert_field_content(row, func_str):
         return apply_fct(row, funcargs, func_str)
     return map_value(row, func_str)
 
+# Add a MARC subfield or generic XML element
 def add_subfield(element_field, row, code, func_str, is_datafield=True):
     mapped_value = convert_field_content(row, func_str)
     if mapped_value == None or mapped_value == '' or str(mapped_value).lower() == 'nan':
@@ -206,6 +198,7 @@ def add_subfield(element_field, row, code, func_str, is_datafield=True):
     subel.text = rpl_json_spe_caracter(mapped_value)
     return subel
 
+# Create a MARC datafield with indicators
 def create_datafield(tag_ind):
     match = re.search('([0-9]{3})(([0-9_])([0-9_]))?', tag_ind)
     tag = match.group(1)
@@ -214,13 +207,15 @@ def create_datafield(tag_ind):
     datafield = ET.Element('datafield', attrib={'tag': tag, 'ind1': ind1, 'ind2': ind2})
     return datafield 
 
+# Print an error message for incorrect "for" usage in mapping
 def message_erreur_for(tag, sf):
-    print("ERREUR arguments pour tag {tag} dans sf {sf}")
-    print("Lorsque 'for' est utilisé, il faut au moins 2 arguments, exemple : 'for§boucle§contenu boucle")
-    print("Note boucle for avec dictionnaire python : pour utliser l'élément courant dans le contenu de la boucle, utiliser %s")
-    print("Note boucle for avec fichier excel externe : pour utliser l'élément courant dans le contenu de la boucle, utiliser %s<nom colonne>%s")
-    print("Note : il est possible d'ajouter une condition dans la boucle comme suit : for§boucle§if§condition§alors§sinon")
+    print("ERROR arguments for tag {tag} in sf {sf}")
+    print("When 'for' is used, at least 2 arguments are required.")
+    print("Example:  for§loop§if§condition§true value§optional false value")
+    print("Note: use %s to insert current element inside loops Python dict-based")
+    print("Note: use %s<column name>%s to insert current element inside Excel loops")
 
+# Detect and evaluate "for" loops in mapping (Excel or Python dict-based)
 def for_eval_boucle(row, el_params):
     if type(el_params)!= str:
         return None 
@@ -230,24 +225,23 @@ def for_eval_boucle(row, el_params):
         boucle_type = 'excel'
     else:
         return None
-    # exemple de sf avec for : ["a", "for§'@Langue'.split('/')§if§%s in #lang008.keys§#lang008[%s]"]
+    # sf example : ["a", "for§'@Langue'.split('/')§if§%s in #lang008.keys§#lang008[%s]"]
     # sf[1] = "for§'@Langue'.split('/')§if§%s in #lang008.keys§#lang008[%s]"
     split_el_param = el_params.split('§') # = "for", "'@Langue'.split('/')", "if", "%s in #lang008.keys§#lang008[%s]"
     boucle = split_el_param[1] # = '@Langue'.split('/')
     # eval boucle
     boucle_eval = map_value(row, boucle, cond_var=True, cond_glob=True) # = 'EN/FR/DE'.split('/')
-    # cette boucle permet de créer plusieurs sous-champs avec le même code en bouclant sur une liste
-    # exemple : 041 $a eng $a fre $a ger
+    # example : 041 $a eng $a fre $a ger
     return boucle_eval, split_el_param, boucle_type
 
+# Ensure "for" has enough arguments
 def for_erreur(el_name, sf1_list, sf):
     if len(sf1_list)<2:
         message_erreur_for(el_name, sf)
         exit()
 
+# Replace placeholders (%s...%s) in Excel-based loop expressions
 def convert_excel_val(excel_element, params_boucle):
-    # Remplace valeur fichier dans condition
-    # params_list = ["if", "%sIDJeux%s == @IDJeux"]
     func_arg = []
     for index, arg in enumerate(params_boucle):
         if index == 0:
@@ -264,13 +258,14 @@ def convert_excel_val(excel_element, params_boucle):
             # Condition
             if index == 1:
                 arg = arg.replace(match.group(), f"'{val}'")
-            # valTrue et valFalse
+            # ValTrue and valFalse
             else:
                 arg = arg.replace(match.group(), val)
         func_arg.append(arg)
     func_str = "§".join(func_arg)
     return func_str
 
+# Replace placeholders (%s...) in Python dict-based loop expressions
 def convert_py_dic_val(py_dic_el, params_boucle):
     func_arg = []
     for index, arg in enumerate(params_boucle):
@@ -283,6 +278,7 @@ def convert_py_dic_val(py_dic_el, params_boucle):
     func_str = "§".join(func_arg)
     return func_str
 
+# Handle "forExcel" loops to generate multiple subfields/datafields
 def boucle_excel(row, boucle_eval, split_el_param, boucle_type, el_name, field, element_field, is_sf=True, stop_to_match=False):
     if boucle_type != 'excel':
         return
@@ -292,14 +288,14 @@ def boucle_excel(row, boucle_eval, split_el_param, boucle_type, el_name, field, 
         for_erreur(el_name, split_el_param, field)
 
         if is_sf:
-            # convertir valeurs %s<col name>%s avec val excel file
+            # Convert value %scolumn name%s with Excel file value in subfield
             func_str = convert_excel_val(el, split_el_param[2:])             
             subfield = add_subfield(element_field, row, field[0], func_str)
             if subfield != None and stop_to_match:
                 return subfield
         else:
             datafield = create_datafield(field[0])
-            # reconstruction datafield avec ajout if et condition datafield
+            # Recreate datafield with if and condition
             list_of_sf_list = []
             for sf in field[2:]:
                 if sf[0] == "_comment":
@@ -307,7 +303,7 @@ def boucle_excel(row, boucle_eval, split_el_param, boucle_type, el_name, field, 
                 code = sf[0]
                 valsf = sf[1]
                 sf_split_el = [split_el_param[2], split_el_param[3], valsf]
-                # convertir valeurs %s<col name>%s avec val excel file
+                # Convert value %scolumn name%s with Excel file value in datafield
                 func_str = convert_excel_val(el, sf_split_el)
                 sf_construct = [code, func_str]
                 list_of_sf_list.append(sf_construct)
@@ -315,6 +311,7 @@ def boucle_excel(row, boucle_eval, split_el_param, boucle_type, el_name, field, 
             if subfields != []:
                 element_field.append(datafield)
 
+# Handle "for" loops with Python dictionaries to generate subfields/datafields
 def boucle_py_dict(row, boucle_eval, split_el_param, boucle_type, el_name, field, element_field, is_sf=True, stop_to_match=False):
     if boucle_type != 'py_dict':
         return
@@ -331,7 +328,7 @@ def boucle_py_dict(row, boucle_eval, split_el_param, boucle_type, el_name, field
                 return subfield
         else:
             datafield = create_datafield(field[0])
-            # reconstruction datafield avec ajout if et condition datafield
+            # recreate datafield with if and datafield condition
             list_of_sf_list = []
             for sf in field[2:]:
                 if sf[0] == "_comment":
@@ -347,7 +344,8 @@ def boucle_py_dict(row, boucle_eval, split_el_param, boucle_type, el_name, field
             subfields = create_subfield(row, datafield, list_of_sf_list, stop_to_match=True)
             if subfields != []:
                 element_field.append(datafield)
-
+                
+# Create all subfields for a datafield, with loop handling
 def create_subfield(row, element_field, list_of_sf_list, is_datafield=True, stop_to_match=False):
     subfields = []
     for sf in list_of_sf_list:
@@ -359,21 +357,21 @@ def create_subfield(row, element_field, list_of_sf_list, is_datafield=True, stop
             el_name = element_field.tag
 
         is_boucle = for_eval_boucle(row, sf[1])
-        # si pas de boucle
+        # Case: no loop
         if not is_boucle:
             subfield = add_subfield(element_field, row, sf[0], sf[1], is_datafield=is_datafield)
             if subfield != None:
                 subfields.append(subfield)
+        # Case: with loop (Excel or dict)
         else:
             boucle_eval = is_boucle[0]
             sf1_list = is_boucle[1]
             boucle_type = is_boucle[2]
 
-            # gestion excel file
             subfield_excel = boucle_excel(row, boucle_eval, sf1_list, boucle_type, el_name, sf, element_field, stop_to_match=stop_to_match)
             if subfield_excel != None:
                 subfields.append(subfield_excel)
-            # gestion cas standards
+
             subfield_py_dict = boucle_py_dict(row, boucle_eval, sf1_list, boucle_type, el_name, sf, element_field, stop_to_match=stop_to_match)
             if subfield_py_dict != None:
                 subfields.append(subfield_py_dict)

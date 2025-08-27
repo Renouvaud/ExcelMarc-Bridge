@@ -1,10 +1,8 @@
-""" Python libraries """
-import xml.etree.ElementTree as ET
+# Copyright 2025 Renouvaud
+# License GPL-3.0 or later (https://www.gnu.org/licenses/gpl-3.0)
 
 """ Local functions """
-#from general import *
 import global_dict
-
 
 def get_ind(check_str):
     if check_str != None:

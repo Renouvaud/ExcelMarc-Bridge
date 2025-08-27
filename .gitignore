@@ -6,5 +6,5 @@
 test_files/*
 other_params/*
 z_archives/*
-__pycache__
+__pycache__/
 convert_xlsx_to_marc21.code-workspace
