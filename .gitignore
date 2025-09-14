@@ -1,9 +1,8 @@
 .metals
 .vscode
 .git
-*.xlsx
-*.xml
-test_files/*
+
+projects/*
 other_params/*
 z_archives/*
 __pycache__/

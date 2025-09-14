@@ -1,0 +1,1189 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection xmlns:marc="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <record>
+      <mms_id>99xxxxxxxxxxxxx</mms_id>
+      <leader>02167nrm a2200457 a 4500</leader>
+      <controlfield tag="007">k|||m|</controlfield>
+      <controlfield tag="008">      s2021    xx |||        ||||||fre d</controlfield>
+      <datafield tag="024" ind1="3" ind2=" ">
+         <subfield code="a">5414301250470</subfield>
+      </datafield>
+      <datafield tag="028" ind1="5" ind2="2">
+         <subfield code="a">SMX 224 SmartMax</subfield>
+      </datafield>
+      <datafield tag="035" ind1=" " ind2=" ">
+         <subfield code="a">(TEST)1911</subfield>
+      </datafield>
+      <datafield tag="040" ind1=" " ind2=" ">
+         <subfield code="a">RNV test</subfield>
+      </datafield>
+      <datafield tag="245" ind1="0" ind2="0">
+         <subfield code="a">SmartMax : My First Sounds &amp; Senses</subfield>
+      </datafield>
+      <datafield tag="246" ind1=" " ind2="3">
+         <subfield code="a">My First Sounds &amp; Senses</subfield>
+      </datafield>
+      <datafield tag="264" ind1=" " ind2="2">
+         <subfield code="a">[Lieu de publication non identifié] : </subfield>
+         <subfield code="b">SmartMax, </subfield>
+         <subfield code="c">2021</subfield>
+      </datafield>
+      <datafield tag="300" ind1=" " ind2=" ">
+         <subfield code="a">1 jeu dans une boîte</subfield>
+      </datafield>
+      <datafield tag="336" ind1=" " ind2=" ">
+         <subfield code="b">tdf</subfield>
+         <subfield code="2">rdacontent</subfield>
+      </datafield>
+      <datafield tag="337" ind1=" " ind2=" ">
+         <subfield code="b">n</subfield>
+         <subfield code="2">rdamedia</subfield>
+      </datafield>
+      <datafield tag="338" ind1=" " ind2=" ">
+         <subfield code="b">nr</subfield>
+         <subfield code="2">rdacarrier</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Nombre de joueurs·euses : 1</subfield>
+      </datafield>
+      <datafield tag="505" ind1="0" ind2=" ">
+         <subfield code="a">boîte du jeu, plastifiée -- Ensemble de 4 hochets magnétiques, -- en 2 parties -- 1 sac en tissu vert 'Minnie Mouse'</subfield>
+      </datafield>
+      <datafield tag="972" ind1=" " ind2=" ">
+         <subfield code="a">vdtest</subfield>
+      </datafield>
+      <datafield tag="985" ind1=" " ind2=" ">
+         <subfield code="2">ctest</subfield>
+         <subfield code="a">1</subfield>
+         <subfield code="b">Jeux pour le jeu d'Exercice</subfield>
+         <subfield code="c">EX. éveil sensoriel</subfield>
+         <subfield code="9">local</subfield>
+      </datafield>
+      <datafield tag="998" ind1=" " ind2=" ">
+         <subfield code="a">ImportPython/test</subfield>
+      </datafield>
+      <holding_data>
+         <leader>     nx  a22     1n 4500</leader>
+         <datafield tag="852" ind1=" " ind2=" ">
+            <subfield code="b">test</subfield>
+            <subfield code="h">EX. éveil sensoriel</subfield>
+         </datafield>
+      </holding_data>
+      <item_data>
+         <alternative_call_number>EX. éveil sensoriel</alternative_call_number>
+         <alternative_call_number_type>8</alternative_call_number_type>
+         <arrival_date>2024-09-12</arrival_date>
+         <barcode>EY3431</barcode>
+         <fulfillment_note>à l'emprunt, avertir qu'il faut ouvrir la boîte par le haut, selon flèches !</fulfillment_note>
+         <inventory_date>2025-04-10</inventory_date>
+         <inventory_price>33,9</inventory_price>
+         <internal_note_2>Jouet primé : 2020 - Toy of the Year (Belgium). 2020 - Toy of the Year (Netherlands). 2020 - Independent Toy award - GOLD Construction (United Kingdom). 2020 - The Dadsnet awards - SILVER Winner (United Kingdom). 2020 - Top 100 Made for mums Xmas Toys List (United Kingdom). 2021 - Independent Toy Awards - Category: Gold Construction (United Kingdom). 2021 - Toy of the Year Award (Finland)</internal_note_2>
+         <physical_material_type>VIDEOGAME</physical_material_type>
+         <policy>3000</policy>
+         <statistical_note_2>400coups</statistical_note_2>
+      </item_data>
+   </record>
+   <record>
+      <leader>02167nrm a2200457 a 4500</leader>
+      <controlfield tag="007">k|||m|</controlfield>
+      <controlfield tag="008">      s2016    xx |||        ||||||mul d</controlfield>
+      <datafield tag="024" ind1="3" ind2=" ">
+         <subfield code="a">4010168220413</subfield>
+      </datafield>
+      <datafield tag="035" ind1=" " ind2=" ">
+         <subfield code="a">(TEST)704</subfield>
+      </datafield>
+      <datafield tag="040" ind1=" " ind2=" ">
+         <subfield code="a">RNV test</subfield>
+      </datafield>
+      <datafield tag="041" ind1=" " ind2=" ">
+         <subfield code="a">fre</subfield>
+         <subfield code="a">ger</subfield>
+         <subfield code="a">ita</subfield>
+         <subfield code="a">eng</subfield>
+      </datafield>
+      <datafield tag="245" ind1="0" ind2="0">
+         <subfield code="a">Kikou le coucou (As d'Or enfants, Cannes 2017)</subfield>
+      </datafield>
+      <datafield tag="264" ind1=" " ind2="2">
+         <subfield code="a">[Lieu de publication non identifié] : </subfield>
+         <subfield code="b">HABA, </subfield>
+         <subfield code="c">2016</subfield>
+      </datafield>
+      <datafield tag="300" ind1=" " ind2=" ">
+         <subfield code="a">1 jeu dans une boîte</subfield>
+      </datafield>
+      <datafield tag="336" ind1=" " ind2=" ">
+         <subfield code="b">tdf</subfield>
+         <subfield code="2">rdacontent</subfield>
+      </datafield>
+      <datafield tag="337" ind1=" " ind2=" ">
+         <subfield code="b">n</subfield>
+         <subfield code="2">rdamedia</subfield>
+      </datafield>
+      <datafield tag="338" ind1=" " ind2=" ">
+         <subfield code="b">nr</subfield>
+         <subfield code="2">rdacarrier</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Age min : 4 ans</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Nombre de joueurs·euses : 2-5</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Durée de la partie : 00:15</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Mécanique : Prise de risque – Stop ou encore</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Interaction : Animation</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Thème : Nature</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Dimensions : 9 / 9 / 26</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Poids : 0.5</subfield>
+      </datafield>
+      <datafield tag="505" ind1="0" ind2=" ">
+         <subfield code="a">1 boîte métallique Kikou (bas = nid) -- 1 figurine en bois Kikou le coucou -- 70 baguettes en bois -- 1 élastique -- 20 oeufs de coucou -- 1 règle du jeu multilingue, plastifié</subfield>
+      </datafield>
+      <datafield tag="521" ind1=" " ind2=" ">
+         <subfield code="a">Famille</subfield>
+         <subfield code="9">vdtest/09.2025</subfield>
+      </datafield>
+      <datafield tag="700" ind1="1" ind2=" ">
+         <subfield code="a">i Roca, Josep Maria</subfield>
+         <subfield code="4">aut</subfield>
+      </datafield>
+      <datafield tag="700" ind1="1" ind2=" ">
+         <subfield code="a">Silveira, Gabriella</subfield>
+         <subfield code="4">ill</subfield>
+      </datafield>
+      <datafield tag="856" ind1="4" ind2="2">
+         <subfield code="3">Vidéo</subfield>
+         <subfield code="u">videoregles.net/videoregle/kikou-le-coucou</subfield>
+         <subfield code="z">Règles du jeu</subfield>
+      </datafield>
+      <datafield tag="972" ind1=" " ind2=" ">
+         <subfield code="a">vdtest</subfield>
+      </datafield>
+      <datafield tag="985" ind1=" " ind2=" ">
+         <subfield code="2">ctest</subfield>
+         <subfield code="a">4</subfield>
+         <subfield code="b">Jeux de Règles</subfield>
+         <subfield code="c">REG. adresse</subfield>
+         <subfield code="9">local</subfield>
+      </datafield>
+      <datafield tag="998" ind1=" " ind2=" ">
+         <subfield code="a">ImportPython/test</subfield>
+      </datafield>
+      <holding_data>
+         <leader>     nx  a22     1n 4500</leader>
+         <datafield tag="852" ind1=" " ind2=" ">
+            <subfield code="b">test</subfield>
+            <subfield code="c">5678</subfield>
+            <subfield code="h">REG. adresse</subfield>
+         </datafield>
+      </holding_data>
+      <item_data>
+         <alternative_call_number>REG. adresse</alternative_call_number>
+         <alternative_call_number_type>8</alternative_call_number_type>
+         <arrival_date>2016-09-20</arrival_date>
+         <barcode>EY2246</barcode>
+         <fulfillment_note>Ne convient pas aux enfants de moins de 3 ans !</fulfillment_note>
+         <inventory_date>2020-08-18</inventory_date>
+         <inventory_price>24,9</inventory_price>
+         <internal_note_2>As d'Or Enfants, Cannes 2017</internal_note_2>
+         <item_location>5678</item_location>
+         <physical_material_type>VIDEOGAME</physical_material_type>
+         <policy>3000</policy>
+         <statistical_note_2>400coups</statistical_note_2>
+      </item_data>
+   </record>
+   <record>
+      <leader>02167nrm a2200457 a 4500</leader>
+      <controlfield tag="007">k|||m|</controlfield>
+      <controlfield tag="008">      s        xx |||        ||||||fre d</controlfield>
+      <datafield tag="024" ind1="3" ind2=" ">
+         <subfield code="a">3032163403005</subfield>
+      </datafield>
+      <datafield tag="035" ind1=" " ind2=" ">
+         <subfield code="a">(TEST)1699</subfield>
+      </datafield>
+      <datafield tag="040" ind1=" " ind2=" ">
+         <subfield code="a">RNV test</subfield>
+      </datafield>
+      <datafield tag="245" ind1="0" ind2="0">
+         <subfield code="a">Malette vétérinaire 2-en-1</subfield>
+      </datafield>
+      <datafield tag="264" ind1=" " ind2="2">
+         <subfield code="a">[Lieu de publication non identifié] : </subfield>
+         <subfield code="b">Smoby, </subfield>
+         <subfield code="c">[date de publication non identifiée]</subfield>
+      </datafield>
+      <datafield tag="300" ind1=" " ind2=" ">
+         <subfield code="a">1 jeu dans une boîte</subfield>
+      </datafield>
+      <datafield tag="336" ind1=" " ind2=" ">
+         <subfield code="b">tdf</subfield>
+         <subfield code="2">rdacontent</subfield>
+      </datafield>
+      <datafield tag="337" ind1=" " ind2=" ">
+         <subfield code="b">n</subfield>
+         <subfield code="2">rdamedia</subfield>
+      </datafield>
+      <datafield tag="338" ind1=" " ind2=" ">
+         <subfield code="b">nr</subfield>
+         <subfield code="2">rdacarrier</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Nombre de joueurs·euses : 1</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Thème : Animaux</subfield>
+      </datafield>
+      <datafield tag="505" ind1="0" ind2=" ">
+         <subfield code="a">1 chaton gris-blanc * -- 3 piles LR44 (fournies) -- 1 boîte à chat en 2 pièces (cage/malette) -- avec clapet et poignée amovible -- Accessoires : -- 1 gamelle avec des croquettes -- 1 seringue -- 1 thermomètre -- 1 anneau de pied / pansement -- 1 paire de ciseaux -- 2 flacons avec embouts -- 1 stéthoscope (Fragile et recollé au milieu) -- 2 ordonnances -- Etiquette-photo en A5, laminée -- avec inventaire visuel -- ATTENTION : si besoin, nettoyer le -- chaton en le tamponnant, -- sans le tremper dans l'eau ! -- ** Pansement avec velcro, fabriqué par Nelly juin 2024 **</subfield>
+      </datafield>
+      <datafield tag="972" ind1=" " ind2=" ">
+         <subfield code="a">vdtest</subfield>
+      </datafield>
+      <datafield tag="985" ind1=" " ind2=" ">
+         <subfield code="2">ctest</subfield>
+         <subfield code="a">2</subfield>
+         <subfield code="b">Jeux pour le jeu Symbolique</subfield>
+         <subfield code="c">SYM. rôle / imitation</subfield>
+         <subfield code="9">local</subfield>
+      </datafield>
+      <datafield tag="998" ind1=" " ind2=" ">
+         <subfield code="a">ImportPython/test</subfield>
+      </datafield>
+      <holding_data>
+         <leader>     nx  a22     1n 4500</leader>
+         <datafield tag="852" ind1=" " ind2=" ">
+            <subfield code="b">test</subfield>
+            <subfield code="c">5678</subfield>
+            <subfield code="h">SYM. rôle / imitation</subfield>
+         </datafield>
+      </holding_data>
+      <item_data>
+         <alternative_call_number>SYM. rôle / imitation</alternative_call_number>
+         <alternative_call_number_type>8</alternative_call_number_type>
+         <arrival_date>2023-03-16</arrival_date>
+         <barcode>EY3222</barcode>
+         <fulfillment_note>Petites pièces et matériel fragile - ne convient pas aux enfants de moins de 3 ans !</fulfillment_note>
+         <inventory_date>2024-12-13</inventory_date>
+         <inventory_price>49,95</inventory_price>
+         <internal_note_1>Note de contenu : 3x LR44</internal_note_1>
+         <item_location>5678</item_location>
+         <physical_material_type>VIDEOGAME</physical_material_type>
+         <policy>3000</policy>
+         <statistical_note_2>Franz Carl Weber</statistical_note_2>
+      </item_data>
+   </record>
+   <record>
+      <mms_id>99xxxxxxxxxxxx1</mms_id>
+      <leader>02167nrm a2200457 a 4500</leader>
+      <controlfield tag="007">k|||m|</controlfield>
+      <controlfield tag="008">      s2021    xx |||        ||||||fre d</controlfield>
+      <datafield tag="024" ind1="3" ind2=" ">
+         <subfield code="a">3070900056435</subfield>
+      </datafield>
+      <datafield tag="028" ind1="5" ind2="2">
+         <subfield code="a">DJ05643 Djeco</subfield>
+      </datafield>
+      <datafield tag="035" ind1=" " ind2=" ">
+         <subfield code="a">(TEST)1697</subfield>
+      </datafield>
+      <datafield tag="040" ind1=" " ind2=" ">
+         <subfield code="a">RNV test</subfield>
+      </datafield>
+      <datafield tag="245" ind1="0" ind2="0">
+         <subfield code="a">Zig &amp; Go Wroom (45 pcs.)</subfield>
+      </datafield>
+      <datafield tag="264" ind1=" " ind2="2">
+         <subfield code="a">[Lieu de publication non identifié] : </subfield>
+         <subfield code="b">Djeco, </subfield>
+         <subfield code="c">2021</subfield>
+      </datafield>
+      <datafield tag="336" ind1=" " ind2=" ">
+         <subfield code="b">tdf</subfield>
+         <subfield code="2">rdacontent</subfield>
+      </datafield>
+      <datafield tag="337" ind1=" " ind2=" ">
+         <subfield code="b">n</subfield>
+         <subfield code="2">rdamedia</subfield>
+      </datafield>
+      <datafield tag="338" ind1=" " ind2=" ">
+         <subfield code="b">nr</subfield>
+         <subfield code="2">rdacarrier</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Age min : 8 ans</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Nombre de joueurs·euses : 1</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Interaction : Solitaire</subfield>
+      </datafield>
+      <datafield tag="505" ind1="0" ind2=" ">
+         <subfield code="a">1 plateau rond rayé jaune et rouge -- &amp; 2 supports -- 1 roue rayée jaune et rouge -- 1 véhicule -- 3 pentes -- 7 éléments de support -- 3 planches à bascule -- 5 billes * -- 2 maillets, 1 poteau -- 1 toupie avec drapeau -- 20 dominos -- 1 planche rayé jaune -- 2 sachets plastiques (1 grand, 1 mini) -- 1 livret de modèles, plastifié -- 1 inventaire visuel, en A4 laminé -- * 1 bille pas d'origine, -- mais de taille presque identique. </subfield>
+      </datafield>
+      <datafield tag="700" ind1="1" ind2=" ">
+         <subfield code="a">Bricout, Grégory</subfield>
+         <subfield code="4">{'Auteur': 'aut', 'Autre': 'oth', 'Concepteur': 'ccp', 'Créateur': 'cre', 'Design': 'dsr', 'Graphiste': 'grt', 'Illustrateur': 'ill', 'Rédacteur': 'red', 'Rédaction': 'red', 'nan': ''}[Créateur]</subfield>
+      </datafield>
+      <datafield tag="700" ind1="1" ind2=" ">
+         <subfield code="a">Ménard, Jean-Réné</subfield>
+         <subfield code="4">{'Auteur': 'aut', 'Autre': 'oth', 'Concepteur': 'ccp', 'Créateur': 'cre', 'Design': 'dsr', 'Graphiste': 'grt', 'Illustrateur': 'ill', 'Rédacteur': 'red', 'Rédaction': 'red', 'nan': ''}[Créateur]</subfield>
+      </datafield>
+      <datafield tag="856" ind1="4" ind2="2">
+         <subfield code="3">Vidéo</subfield>
+         <subfield code="u">www.youtube.com/watch?v=q0HDDksMREQ</subfield>
+         <subfield code="z">Règles du jeu</subfield>
+      </datafield>
+      <datafield tag="972" ind1=" " ind2=" ">
+         <subfield code="a">vdtest</subfield>
+      </datafield>
+      <datafield tag="985" ind1=" " ind2=" ">
+         <subfield code="2">ctest</subfield>
+         <subfield code="a">3</subfield>
+         <subfield code="b">Jeux d'Assemblage</subfield>
+         <subfield code="c">ASS. découvertes / expérimentation</subfield>
+         <subfield code="9">local</subfield>
+      </datafield>
+      <datafield tag="998" ind1=" " ind2=" ">
+         <subfield code="a">ImportPython/test</subfield>
+      </datafield>
+      <holding_data>
+         <leader>     nx  a22     1n 4500</leader>
+         <datafield tag="852" ind1=" " ind2=" ">
+            <subfield code="b">test</subfield>
+            <subfield code="h">ASS. découvertes / expérimentation</subfield>
+         </datafield>
+      </holding_data>
+      <item_data>
+         <alternative_call_number>ASS. découvertes / expérimentation</alternative_call_number>
+         <alternative_call_number_type>8</alternative_call_number_type>
+         <arrival_date>2023-03-16</arrival_date>
+         <barcode>EY3225</barcode>
+         <fulfillment_note>Dès 8 ans, matériel délicat !</fulfillment_note>
+         <inventory_date>2025-06-15</inventory_date>
+         <inventory_price>69,9</inventory_price>
+         <physical_material_type>VIDEOGAME</physical_material_type>
+         <policy>3000</policy>
+         <statistical_note_2>FNAC</statistical_note_2>
+      </item_data>
+   </record>
+   <record>
+      <leader>02167nrm a2200457 a 4500</leader>
+      <controlfield tag="007">k|||m|</controlfield>
+      <controlfield tag="008">      s2013    xx |||        ||||||fre d</controlfield>
+      <datafield tag="024" ind1="3" ind2=" ">
+         <subfield code="a">5425016921463</subfield>
+      </datafield>
+      <datafield tag="035" ind1=" " ind2=" ">
+         <subfield code="a">(TEST)1758</subfield>
+      </datafield>
+      <datafield tag="040" ind1=" " ind2=" ">
+         <subfield code="a">RNV test</subfield>
+      </datafield>
+      <datafield tag="041" ind1=" " ind2=" ">
+         <subfield code="a">fre</subfield>
+      </datafield>
+      <datafield tag="245" ind1="0" ind2="0">
+         <subfield code="a">Concept (As d'Or, 2014)</subfield>
+      </datafield>
+      <datafield tag="264" ind1=" " ind2="2">
+         <subfield code="a">[Lieu de publication non identifié] : </subfield>
+         <subfield code="b">Repos Production, </subfield>
+         <subfield code="c">2013</subfield>
+      </datafield>
+      <datafield tag="336" ind1=" " ind2=" ">
+         <subfield code="b">tdf</subfield>
+         <subfield code="2">rdacontent</subfield>
+      </datafield>
+      <datafield tag="337" ind1=" " ind2=" ">
+         <subfield code="b">n</subfield>
+         <subfield code="2">rdamedia</subfield>
+      </datafield>
+      <datafield tag="338" ind1=" " ind2=" ">
+         <subfield code="b">nr</subfield>
+         <subfield code="2">rdacarrier</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Age min : 10 ans</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Nombre de joueurs·euses : 4-12</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Durée de la partie : 00:40</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Mécanique : Déduction - Enigme</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Interaction : Equipe</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Thème : Enigme</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Jeu adapté aux troubles DYS : Langage Oral</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Dimensions : 12 / 30 / 30</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Poids : 1</subfield>
+      </datafield>
+      <datafield tag="505" ind1="0" ind2=" ">
+         <subfield code="a">1 plateau d'icônes universelles -- 1 bol de rangement blanc -- 5 pions en plastique, dont: -- - 4 points d'exclamation (bleu, rouge, jaune, noir) -- - 1 point d'interrogation vert -- 42 cubes, dont : -- - 10x vert -- - 8x rouge, 8x bleu -- - 8x jaune, 8x noir -- 110 cartes Concept -- 27 jetons 'Ampoules simple' -- 12 jetons 'Ampoules doubl's -- 1 livret Règles du jeu, plastifiée -- 4 aides de jeu, laminées -- 2 petits sachets plastiques -- 1 élastique</subfield>
+      </datafield>
+      <datafield tag="521" ind1=" " ind2=" ">
+         <subfield code="a">Découverte</subfield>
+         <subfield code="9">vdtest/09.2025</subfield>
+      </datafield>
+      <datafield tag="700" ind1="1" ind2=" ">
+         <subfield code="a">Azagury, Eric</subfield>
+         <subfield code="4">ill</subfield>
+      </datafield>
+      <datafield tag="700" ind1="1" ind2=" ">
+         <subfield code="a">Beaujannot, Gaëtan</subfield>
+         <subfield code="4">{'Auteur': 'aut', 'Autre': 'oth', 'Concepteur': 'ccp', 'Créateur': 'cre', 'Design': 'dsr', 'Graphiste': 'grt', 'Illustrateur': 'ill', 'Rédacteur': 'red', 'Rédaction': 'red', 'nan': ''}[Créateur]</subfield>
+      </datafield>
+      <datafield tag="700" ind1="1" ind2=" ">
+         <subfield code="a">Chevalley, Cédric</subfield>
+         <subfield code="4">ill</subfield>
+      </datafield>
+      <datafield tag="700" ind1="1" ind2=" ">
+         <subfield code="a">Rivollet, Alain</subfield>
+         <subfield code="4">{'Auteur': 'aut', 'Autre': 'oth', 'Concepteur': 'ccp', 'Créateur': 'cre', 'Design': 'dsr', 'Graphiste': 'grt', 'Illustrateur': 'ill', 'Rédacteur': 'red', 'Rédaction': 'red', 'nan': ''}[Créateur]</subfield>
+      </datafield>
+      <datafield tag="856" ind1="4" ind2="2">
+         <subfield code="3">Vidéo</subfield>
+         <subfield code="u">www.concept-the-game.com/index.php?lang=befr</subfield>
+         <subfield code="z">Règles du jeu</subfield>
+      </datafield>
+      <datafield tag="972" ind1=" " ind2=" ">
+         <subfield code="a">vdtest</subfield>
+      </datafield>
+      <datafield tag="905" ind1=" " ind2=" ">
+         <subfield code="a">etoyjcoeur</subfield>
+         <subfield code="b">2509</subfield>
+      </datafield>
+      <datafield tag="985" ind1=" " ind2=" ">
+         <subfield code="2">ctest</subfield>
+         <subfield code="a">4</subfield>
+         <subfield code="b">Jeux de Règles</subfield>
+         <subfield code="c">REG. langage &amp; expression</subfield>
+         <subfield code="9">local</subfield>
+      </datafield>
+      <datafield tag="998" ind1=" " ind2=" ">
+         <subfield code="a">ImportPython/test</subfield>
+      </datafield>
+      <holding_data>
+         <leader>     nx  a22     1n 4500</leader>
+         <datafield tag="852" ind1=" " ind2=" ">
+            <subfield code="b">test</subfield>
+            <subfield code="c">3456</subfield>
+            <subfield code="h">REG. langage &amp; expression</subfield>
+         </datafield>
+      </holding_data>
+      <item_data>
+         <alternative_call_number>REG. langage &amp; expression</alternative_call_number>
+         <alternative_call_number_type>8</alternative_call_number_type>
+         <arrival_date>2023-07-04</arrival_date>
+         <barcode>EY3284</barcode>
+         <inventory_date>2024-09-19</inventory_date>
+         <inventory_price>39,9</inventory_price>
+         <internal_note_2>Jeu primé : As d'Or, Cannes 2014</internal_note_2>
+         <item_location>3456</item_location>
+         <physical_material_type>VIDEOGAME</physical_material_type>
+         <policy>3000</policy>
+         <statistical_note_2>L'épée à 2 nains</statistical_note_2>
+      </item_data>
+   </record>
+   <record>
+      <leader>02167nrm a2200457 a 4500</leader>
+      <controlfield tag="007">k|||m|</controlfield>
+      <controlfield tag="008">      s2015    xx |||        ||||||mul d</controlfield>
+      <datafield tag="024" ind1="3" ind2=" ">
+         <subfield code="a">3770005767006</subfield>
+      </datafield>
+      <datafield tag="035" ind1=" " ind2=" ">
+         <subfield code="a">(TEST)660</subfield>
+      </datafield>
+      <datafield tag="040" ind1=" " ind2=" ">
+         <subfield code="a">RNV test</subfield>
+      </datafield>
+      <datafield tag="041" ind1=" " ind2=" ">
+         <subfield code="a">fre</subfield>
+         <subfield code="a">eng</subfield>
+      </datafield>
+      <datafield tag="245" ind1="0" ind2="0">
+         <subfield code="a">Celestia</subfield>
+      </datafield>
+      <datafield tag="264" ind1=" " ind2="2">
+         <subfield code="a">[Lieu de publication non identifié] : </subfield>
+         <subfield code="b">Blam !, </subfield>
+         <subfield code="c">2015</subfield>
+      </datafield>
+      <datafield tag="336" ind1=" " ind2=" ">
+         <subfield code="b">tdf</subfield>
+         <subfield code="2">rdacontent</subfield>
+      </datafield>
+      <datafield tag="337" ind1=" " ind2=" ">
+         <subfield code="b">n</subfield>
+         <subfield code="2">rdamedia</subfield>
+      </datafield>
+      <datafield tag="338" ind1=" " ind2=" ">
+         <subfield code="b">nr</subfield>
+         <subfield code="2">rdacarrier</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Age min : 8 ans</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Nombre de joueurs·euses : 2-6</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Durée de la partie : 00:30</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Mécanique : Prise de risque – Stop ou encore</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Interaction : Compétition</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Thème : Fantastique</subfield>
+      </datafield>
+      <datafield tag="505" ind1="0" ind2=" ">
+         <subfield code="a">1 aeronef (12 éléments en carton) -- 6 pions 'Aventurier' -- (rouge, bleu, jaune, vert, noir, lila) -- 6 tuiles 'Aventurier' -- 9 tuiles ovales 'Cité' -- 4 dès 'Evènement' -- 78 petites cartes 'Trésor' -- 68 cartes 'Equipement' dont: -- - 20 boussoles bleues -- - 18 parafoudres jaunes -- - 16 cornes de brume rouges -- - 14 cannons noirs -- 8 cartes 'Turbo' -- 4x 2 cartes 'Pouvoir' -- 1 livret de règles en FR, plastifié -- 1 guide de montage pour l'aeronef -- 4 petits sachets plastiques</subfield>
+      </datafield>
+      <datafield tag="521" ind1=" " ind2=" ">
+         <subfield code="a">Découverte</subfield>
+         <subfield code="9">vdtest/09.2025</subfield>
+      </datafield>
+      <datafield tag="700" ind1="1" ind2=" ">
+         <subfield code="a">Aaron, Weissblum</subfield>
+         <subfield code="4">aut</subfield>
+      </datafield>
+      <datafield tag="700" ind1="1" ind2=" ">
+         <subfield code="a">Gaetan, Noir</subfield>
+         <subfield code="4">ill</subfield>
+      </datafield>
+      <datafield tag="856" ind1="4" ind2="2">
+         <subfield code="3">Vidéo</subfield>
+         <subfield code="u">blam-edition.com/fr/celestia</subfield>
+         <subfield code="z">Règles du jeu</subfield>
+      </datafield>
+      <datafield tag="972" ind1=" " ind2=" ">
+         <subfield code="a">vdtest</subfield>
+      </datafield>
+      <datafield tag="905" ind1=" " ind2=" ">
+         <subfield code="a">etoyjcoeur</subfield>
+         <subfield code="b">2509</subfield>
+      </datafield>
+      <datafield tag="985" ind1=" " ind2=" ">
+         <subfield code="2">ctest</subfield>
+         <subfield code="a">4</subfield>
+         <subfield code="b">Jeux de Règles</subfield>
+         <subfield code="c">REG. réflexion &amp; stratégie</subfield>
+         <subfield code="9">local</subfield>
+      </datafield>
+      <datafield tag="998" ind1=" " ind2=" ">
+         <subfield code="a">ImportPython/test</subfield>
+      </datafield>
+      <holding_data>
+         <leader>     nx  a22     1n 4500</leader>
+         <datafield tag="852" ind1=" " ind2=" ">
+            <subfield code="b">test</subfield>
+            <subfield code="c">3456</subfield>
+            <subfield code="h">REG. réflexion &amp; stratégie</subfield>
+         </datafield>
+      </holding_data>
+      <item_data>
+         <alternative_call_number>REG. réflexion &amp; stratégie</alternative_call_number>
+         <alternative_call_number_type>8</alternative_call_number_type>
+         <arrival_date>2016-04-19</arrival_date>
+         <barcode>EY2202</barcode>
+         <inventory_date>2024-09-19</inventory_date>
+         <inventory_price>32</inventory_price>
+         <internal_note_1>Pièces de rechange : Oui, éléments pour l'aeronef ; Oui, voir 'Pces'</internal_note_1>
+         <internal_note_2>règle 'coup de pouce': blam-edition.com/medias/5bc05b9244fa1_Celestia_EXT_1.0_FR-16-07-21.pdf</internal_note_2>
+         <item_location>3456</item_location>
+         <physical_material_type>VIDEOGAME</physical_material_type>
+         <policy>3000</policy>
+         <statistical_note_2>Au Paradis du Jeu</statistical_note_2>
+      </item_data>
+   </record>
+   <record>
+      <leader>02167nrm a2200457 a 4500</leader>
+      <controlfield tag="007">k|||m|</controlfield>
+      <controlfield tag="008">      s2017    xx |||        ||||||fre d</controlfield>
+      <datafield tag="024" ind1="3" ind2=" ">
+         <subfield code="a">4005556763436</subfield>
+      </datafield>
+      <datafield tag="035" ind1=" " ind2=" ">
+         <subfield code="a">(TEST)1383</subfield>
+      </datafield>
+      <datafield tag="040" ind1=" " ind2=" ">
+         <subfield code="a">RNV test</subfield>
+      </datafield>
+      <datafield tag="041" ind1=" " ind2=" ">
+         <subfield code="a">fre</subfield>
+      </datafield>
+      <datafield tag="245" ind1="0" ind2="0">
+         <subfield code="a">Roller Coaster Challenge</subfield>
+      </datafield>
+      <datafield tag="264" ind1=" " ind2="2">
+         <subfield code="a">[Lieu de publication non identifié] : </subfield>
+         <subfield code="b">Thinkfun, </subfield>
+         <subfield code="c">2017</subfield>
+      </datafield>
+      <datafield tag="300" ind1=" " ind2=" ">
+         <subfield code="a">1 jeu dans une boîte</subfield>
+      </datafield>
+      <datafield tag="336" ind1=" " ind2=" ">
+         <subfield code="b">tdf</subfield>
+         <subfield code="2">rdacontent</subfield>
+      </datafield>
+      <datafield tag="337" ind1=" " ind2=" ">
+         <subfield code="b">n</subfield>
+         <subfield code="2">rdamedia</subfield>
+      </datafield>
+      <datafield tag="338" ind1=" " ind2=" ">
+         <subfield code="b">nr</subfield>
+         <subfield code="2">rdacarrier</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Age min : 6 ans</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Nombre de joueurs·euses : 1</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Durée de la partie : 00:20</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Mécanique : Mathématique – Géométrie - Relat</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Interaction : Solitaire</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Jeu adapté aux troubles DYS : Logique</subfield>
+      </datafield>
+      <datafield tag="505" ind1="0" ind2=" ">
+         <subfield code="a">boîte du jeu, plastifiée -- 1 grille de jeu -- 1 wagonnet rouge -- 43 segments de voie, dont : -- - 10x vert -- - 8x bleu foncé -- - 8x rouge -- - 6x turquoise -- - 5x jaune -- - 4x orange -- - 2x fuchsia -- 36 sections de poteaux (noir) -- 2 sachets plastiques -- 2 tunnels en carton -- 40 cartes Défis avec les Solutions -- (niveaux Facile à Très difficile) -- 1 boite pour les cartes, plastifiée -- Règles du jeu, livret plastifié -- mai 2024 : réparation du toboggan jaune</subfield>
+      </datafield>
+      <datafield tag="521" ind1=" " ind2=" ">
+         <subfield code="a">Famille</subfield>
+         <subfield code="9">vdtest/09.2025</subfield>
+      </datafield>
+      <datafield tag="700" ind1="1" ind2=" ">
+         <subfield code="a">Morris, Oliver</subfield>
+         <subfield code="4">aut</subfield>
+      </datafield>
+      <datafield tag="972" ind1=" " ind2=" ">
+         <subfield code="a">vdtest</subfield>
+      </datafield>
+      <datafield tag="985" ind1=" " ind2=" ">
+         <subfield code="2">ctest</subfield>
+         <subfield code="a">4</subfield>
+         <subfield code="b">Jeux de Règles</subfield>
+         <subfield code="c">REG. parcours</subfield>
+         <subfield code="9">local</subfield>
+      </datafield>
+      <datafield tag="998" ind1=" " ind2=" ">
+         <subfield code="a">ImportPython/test</subfield>
+      </datafield>
+      <holding_data>
+         <leader>     nx  a22     1n 4500</leader>
+         <datafield tag="852" ind1=" " ind2=" ">
+            <subfield code="b">test</subfield>
+            <subfield code="h">REG. parcours</subfield>
+         </datafield>
+      </holding_data>
+      <item_data>
+         <alternative_call_number>REG. parcours</alternative_call_number>
+         <alternative_call_number_type>8</alternative_call_number_type>
+         <arrival_date>2020-11-18</arrival_date>
+         <barcode>EY2914</barcode>
+         <fulfillment_note>tobbogan jaune réparé en mai 2024</fulfillment_note>
+         <inventory_date>2024-05-02</inventory_date>
+         <inventory_price>36,9</inventory_price>
+         <internal_note_2>Langues des règles du jeu: FR, DE, IT, EN, ES, PT, NL. Livret règles disponible en pdf sur le site de l'éditeur (taille trop grande pour rajouter à Ludopédia).</internal_note_2>
+         <internal_note_3>[25.03.2024] - Le tobbogan est cassé et à recoller</internal_note_3>
+         <physical_material_type>VIDEOGAME</physical_material_type>
+         <policy>3000</policy>
+         <statistical_note_2>QoQa</statistical_note_2>
+      </item_data>
+   </record>
+   <record>
+      <leader>02167nrm a2200457 a 4500</leader>
+      <controlfield tag="007">k|||m|</controlfield>
+      <controlfield tag="008">      s2020    xx |||        ||||||fre d</controlfield>
+      <datafield tag="024" ind1="3" ind2=" ">
+         <subfield code="a">3421271125211</subfield>
+      </datafield>
+      <datafield tag="035" ind1=" " ind2=" ">
+         <subfield code="a">(TEST)1445</subfield>
+      </datafield>
+      <datafield tag="040" ind1=" " ind2=" ">
+         <subfield code="a">RNV test</subfield>
+      </datafield>
+      <datafield tag="041" ind1=" " ind2=" ">
+         <subfield code="a">fre</subfield>
+      </datafield>
+      <datafield tag="245" ind1="0" ind2="3">
+         <subfield code="a">La Maison des Souris</subfield>
+      </datafield>
+      <datafield tag="264" ind1=" " ind2="2">
+         <subfield code="a">[Lieu de publication non identifié] : </subfield>
+         <subfield code="b">Gigamic, </subfield>
+         <subfield code="c">2020</subfield>
+      </datafield>
+      <datafield tag="300" ind1=" " ind2=" ">
+         <subfield code="a">1 jeu dans une boîte</subfield>
+      </datafield>
+      <datafield tag="336" ind1=" " ind2=" ">
+         <subfield code="b">tdf</subfield>
+         <subfield code="2">rdacontent</subfield>
+      </datafield>
+      <datafield tag="337" ind1=" " ind2=" ">
+         <subfield code="b">n</subfield>
+         <subfield code="2">rdamedia</subfield>
+      </datafield>
+      <datafield tag="338" ind1=" " ind2=" ">
+         <subfield code="b">nr</subfield>
+         <subfield code="2">rdacarrier</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Age min : 5 ans</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Nombre de joueurs·euses : 2-6</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Durée de la partie : 00:20</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Mécanique : Observation - Rapidité</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Interaction : Coopération</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Thème : Maison - Vie quotidienne</subfield>
+      </datafield>
+      <datafield tag="505" ind1="0" ind2=" ">
+         <subfield code="a">1 chemise en carton -- = couverture de la boîte, plastifiée -- 1 Maison (montée, ne pas défaire SVP) -- composée de: -- - 2 grandes boîtes -- - 1 cale en plastique noir -- - 1 plateau Sol -- - 1 grand mur central -- - 2 petits murs latéraux -- - 1 table &amp; 1 barre de table -- - 1 feu -- - 1 fixation centrale (plastique transparente) -- - 7 fixations (plastique transparente) -- 10 disques Objet en bois -- 14 jetons Réponse -- (coche/croix, recto-verso) -- 14 jetons Question, dont : -- - 10 jetons Objet -- - 4 jetons Pièce de la maison -- 2 plateaux Questions recto-verso, laminés -- 1 pion Souris -- 1 pion Panier -- 1 lampe de poche -- 2 piles CR1220 -- 2 petits sachets plastiques -- Règles du jeu, en FR -- (4 pages = 2 feuilles XL laminées) -- Montage de la maison, 1 feuille XL laminée -- Mode d'emploi pour la Lampe de poche, en A5 laminé -- Inventaire du jeu (sur feuille plastique) -- Piles remplacées en février 2024</subfield>
+      </datafield>
+      <datafield tag="521" ind1=" " ind2=" ">
+         <subfield code="a">Famille</subfield>
+         <subfield code="9">vdtest/09.2025</subfield>
+      </datafield>
+      <datafield tag="700" ind1="1" ind2=" ">
+         <subfield code="a">Aucomte, Jonathan</subfield>
+         <subfield code="4">ill</subfield>
+      </datafield>
+      <datafield tag="700" ind1="1" ind2=" ">
+         <subfield code="a">Clément, Elodie</subfield>
+         <subfield code="4">aut</subfield>
+      </datafield>
+      <datafield tag="700" ind1="1" ind2=" ">
+         <subfield code="a">Rivière, Théo</subfield>
+         <subfield code="4">aut</subfield>
+      </datafield>
+      <datafield tag="856" ind1="4" ind2="2">
+         <subfield code="3">Vidéo</subfield>
+         <subfield code="u">www.youtube.com/watch?v=B3Z2sIbKNPU</subfield>
+         <subfield code="z">Règles du jeu</subfield>
+      </datafield>
+      <datafield tag="972" ind1=" " ind2=" ">
+         <subfield code="a">vdtest</subfield>
+      </datafield>
+      <datafield tag="985" ind1=" " ind2=" ">
+         <subfield code="2">ctest</subfield>
+         <subfield code="a">4</subfield>
+         <subfield code="b">Jeux de Règles</subfield>
+         <subfield code="c">REG. association</subfield>
+         <subfield code="9">local</subfield>
+      </datafield>
+      <datafield tag="998" ind1=" " ind2=" ">
+         <subfield code="a">ImportPython/test</subfield>
+      </datafield>
+      <holding_data>
+         <leader>     nx  a22     1n 4500</leader>
+         <datafield tag="852" ind1=" " ind2=" ">
+            <subfield code="b">test</subfield>
+            <subfield code="c">3456</subfield>
+            <subfield code="h">REG. association</subfield>
+         </datafield>
+      </holding_data>
+      <item_data>
+         <alternative_call_number>REG. association</alternative_call_number>
+         <alternative_call_number_type>8</alternative_call_number_type>
+         <arrival_date>2021-03-11</arrival_date>
+         <barcode>EY2975</barcode>
+         <fulfillment_note>Avertir comment ouvrir la boîte et de suivre le guide de montage/rangement au retour pour éviter des dégâts ! Merci</fulfillment_note>
+         <inventory_date>2025-01-16</inventory_date>
+         <inventory_price>39,9</inventory_price>
+         <internal_note_1>Note de contenu : CR1220 x2</internal_note_1>
+         <internal_note_2>Nominé As d'Or 2021</internal_note_2>
+         <item_location>3456</item_location>
+         <physical_material_type>VIDEOGAME</physical_material_type>
+         <policy>3000</policy>
+         <statistical_note_2>L'épée à 2 nains</statistical_note_2>
+      </item_data>
+   </record>
+   <record>
+      <leader>02167nrm a2200457 a 4500</leader>
+      <controlfield tag="007">k|||m|</controlfield>
+      <controlfield tag="008">      s2020    xx |||        ||||||mul d</controlfield>
+      <datafield tag="024" ind1="3" ind2=" ">
+         <subfield code="a">4010168254074</subfield>
+      </datafield>
+      <datafield tag="035" ind1=" " ind2=" ">
+         <subfield code="a">(TEST)1501</subfield>
+      </datafield>
+      <datafield tag="040" ind1=" " ind2=" ">
+         <subfield code="a">RNV test</subfield>
+      </datafield>
+      <datafield tag="041" ind1=" " ind2=" ">
+         <subfield code="a">fre</subfield>
+         <subfield code="a">ger</subfield>
+         <subfield code="a">ita</subfield>
+         <subfield code="a">eng</subfield>
+      </datafield>
+      <datafield tag="245" ind1="0" ind2="0">
+         <subfield code="a">Fiesta des perles</subfield>
+      </datafield>
+      <datafield tag="264" ind1=" " ind2="2">
+         <subfield code="a">[Lieu de publication non identifié] : </subfield>
+         <subfield code="b">Haba, </subfield>
+         <subfield code="c">2020</subfield>
+      </datafield>
+      <datafield tag="336" ind1=" " ind2=" ">
+         <subfield code="b">tdf</subfield>
+         <subfield code="2">rdacontent</subfield>
+      </datafield>
+      <datafield tag="337" ind1=" " ind2=" ">
+         <subfield code="b">n</subfield>
+         <subfield code="2">rdamedia</subfield>
+      </datafield>
+      <datafield tag="338" ind1=" " ind2=" ">
+         <subfield code="b">nr</subfield>
+         <subfield code="2">rdacarrier</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Nombre de joueurs·euses : 2-4</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Durée de la partie : 00:15</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Mécanique : Collecte/ion-Combinaison-Famille</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Interaction : Compétition</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Thème : Mer</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Jeu adapté aux troubles DYS : Motricité</subfield>
+      </datafield>
+      <datafield tag="505" ind1="0" ind2=" ">
+         <subfield code="a">5 coquilles en 2 parties -- 4 coquillages servant de réserves -- 1 pieuvre -- 25 tuiles 'animal marin' -- 65 perles en bois nature -- 1 moyen sachet plastique -- 1 petit sachets plastique -- 4 cordelettes (bleu clair) -- 2 dés (à motifs, à couleurs) -- Livret multilingue plastifié : -- Règles du jeu</subfield>
+      </datafield>
+      <datafield tag="521" ind1=" " ind2=" ">
+         <subfield code="a">Enfant</subfield>
+         <subfield code="9">vdtest/09.2025</subfield>
+      </datafield>
+      <datafield tag="700" ind1="1" ind2=" ">
+         <subfield code="a">Blaha, Marek</subfield>
+         <subfield code="4">ill</subfield>
+      </datafield>
+      <datafield tag="700" ind1="1" ind2=" ">
+         <subfield code="a">Precht, Thade</subfield>
+         <subfield code="4">aut</subfield>
+      </datafield>
+      <datafield tag="856" ind1="4" ind2="2">
+         <subfield code="3">Vidéo</subfield>
+         <subfield code="u">www.youtube.com/watch?v=ORLnBNbmxcM</subfield>
+         <subfield code="z">Règles du jeu</subfield>
+      </datafield>
+      <datafield tag="972" ind1=" " ind2=" ">
+         <subfield code="a">vdtest</subfield>
+      </datafield>
+      <datafield tag="985" ind1=" " ind2=" ">
+         <subfield code="2">ctest</subfield>
+         <subfield code="a">4</subfield>
+         <subfield code="b">Jeux de Règles</subfield>
+         <subfield code="c">REG. hasard</subfield>
+         <subfield code="9">local</subfield>
+      </datafield>
+      <datafield tag="998" ind1=" " ind2=" ">
+         <subfield code="a">ImportPython/test</subfield>
+      </datafield>
+      <holding_data>
+         <leader>     nx  a22     1n 4500</leader>
+         <datafield tag="852" ind1=" " ind2=" ">
+            <subfield code="b">test</subfield>
+            <subfield code="c">1234</subfield>
+            <subfield code="h">REG. hasard</subfield>
+         </datafield>
+      </holding_data>
+      <item_data>
+         <alternative_call_number>REG. hasard</alternative_call_number>
+         <alternative_call_number_type>8</alternative_call_number_type>
+         <arrival_date>2021-06-24</arrival_date>
+         <barcode>EY3030</barcode>
+         <inventory_date>2024-05-02</inventory_date>
+         <inventory_price>21,9</inventory_price>
+         <internal_note_1>Pièces de rechange : Sachets de billes </internal_note_1>
+         <item_location>1234</item_location>
+         <physical_material_type>VIDEOGAME</physical_material_type>
+         <policy>3000</policy>
+         <statistical_note_2>FNAC</statistical_note_2>
+      </item_data>
+   </record>
+   <record>
+      <leader>02167nrm a2200457 a 4500</leader>
+      <controlfield tag="007">k|||m|</controlfield>
+      <controlfield tag="008">      s2012    xx |||        ||||||fre d</controlfield>
+      <datafield tag="024" ind1="3" ind2=" ">
+         <subfield code="a">3070900066434</subfield>
+      </datafield>
+      <datafield tag="028" ind1="5" ind2="2">
+         <subfield code="a">DJ 6643 Djeco</subfield>
+      </datafield>
+      <datafield tag="035" ind1=" " ind2=" ">
+         <subfield code="a">(TEST)1633</subfield>
+      </datafield>
+      <datafield tag="040" ind1=" " ind2=" ">
+         <subfield code="a">RNV test</subfield>
+      </datafield>
+      <datafield tag="245" ind1="0" ind2="0">
+         <subfield code="a">Tap tap Jardin</subfield>
+      </datafield>
+      <datafield tag="264" ind1=" " ind2="2">
+         <subfield code="a">[Lieu de publication non identifié] : </subfield>
+         <subfield code="b">Djeco, </subfield>
+         <subfield code="c">2012</subfield>
+      </datafield>
+      <datafield tag="300" ind1=" " ind2=" ">
+         <subfield code="a">1 jeu dans une boîte</subfield>
+      </datafield>
+      <datafield tag="336" ind1=" " ind2=" ">
+         <subfield code="b">tdf</subfield>
+         <subfield code="2">rdacontent</subfield>
+      </datafield>
+      <datafield tag="337" ind1=" " ind2=" ">
+         <subfield code="b">n</subfield>
+         <subfield code="2">rdamedia</subfield>
+      </datafield>
+      <datafield tag="338" ind1=" " ind2=" ">
+         <subfield code="b">nr</subfield>
+         <subfield code="2">rdacarrier</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Age min : 4 ans</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Nombre de joueurs·euses : 1</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Interaction : Solitaire</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Thème : Nature</subfield>
+      </datafield>
+      <datafield tag="505" ind1="0" ind2=" ">
+         <subfield code="a">boîte du jeu, plastifiée -- 1 fourre illustré en carton -- à glisser par-dessus -- 1 marteau en bois -- 1 planche de liège -- 5 cartes recto-verso -- 1 sachet plastique -- 38 pièces en bois, -- dont 10 animaux/insectes -- 40 clous &amp; 1 mini sachet -- 1 inventaire visuel en A5, laminé -- pour contrôle du jeu -- ** Manque une feuille rose, notée sur 3 cartes **</subfield>
+      </datafield>
+      <datafield tag="521" ind1=" " ind2=" ">
+         <subfield code="a">Enfant</subfield>
+         <subfield code="9">vdtest/09.2025</subfield>
+      </datafield>
+      <datafield tag="700" ind1="1" ind2=" ">
+         <subfield code="a">Destours, Christine</subfield>
+         <subfield code="4">aut</subfield>
+      </datafield>
+      <datafield tag="972" ind1=" " ind2=" ">
+         <subfield code="a">vdtest</subfield>
+      </datafield>
+      <datafield tag="985" ind1=" " ind2=" ">
+         <subfield code="2">ctest</subfield>
+         <subfield code="a">3</subfield>
+         <subfield code="b">Jeux d'Assemblage</subfield>
+         <subfield code="c">ASS. agencement / puzzle</subfield>
+         <subfield code="9">local</subfield>
+      </datafield>
+      <datafield tag="998" ind1=" " ind2=" ">
+         <subfield code="a">ImportPython/test</subfield>
+      </datafield>
+      <holding_data>
+         <leader>     nx  a22     1n 4500</leader>
+         <datafield tag="852" ind1=" " ind2=" ">
+            <subfield code="b">test</subfield>
+            <subfield code="c">5678</subfield>
+            <subfield code="h">ASS. agencement / puzzle</subfield>
+         </datafield>
+      </holding_data>
+      <item_data>
+         <alternative_call_number>ASS. agencement / puzzle</alternative_call_number>
+         <alternative_call_number_type>8</alternative_call_number_type>
+         <arrival_date>2022-10-08</arrival_date>
+         <barcode>EY3161</barcode>
+         <inventory_date>2025-01-23</inventory_date>
+         <inventory_price>34,9</inventory_price>
+         <internal_note_3>[12.12.2024] - Perte d'une à deux pièces du jeu : 3 clous et 1 feuille (fleur?) en bois</internal_note_3>
+         <item_location>5678</item_location>
+         <physical_material_type>VIDEOGAME</physical_material_type>
+         <policy>3000</policy>
+         <statistical_note_2>Jouets Davidson</statistical_note_2>
+      </item_data>
+   </record>
+   <record>
+      <leader>02167nrm a2200457 a 4500</leader>
+      <controlfield tag="007">k|||m|</controlfield>
+      <controlfield tag="008">      s2017    xx |||        ||||||fre d</controlfield>
+      <datafield tag="024" ind1="3" ind2=" ">
+         <subfield code="a">9782370990082</subfield>
+      </datafield>
+      <datafield tag="035" ind1=" " ind2=" ">
+         <subfield code="a">(TEST)1536</subfield>
+      </datafield>
+      <datafield tag="040" ind1=" " ind2=" ">
+         <subfield code="a">RNV test</subfield>
+      </datafield>
+      <datafield tag="041" ind1=" " ind2=" ">
+         <subfield code="a">fre</subfield>
+      </datafield>
+      <datafield tag="245" ind1="0" ind2="0">
+         <subfield code="a">Sherlock Holmes Détective Conseil n°3 : Carlton House &amp; Queen's Park</subfield>
+      </datafield>
+      <datafield tag="264" ind1=" " ind2="2">
+         <subfield code="a">[Lieu de publication non identifié] : </subfield>
+         <subfield code="b">Space Cowboys, </subfield>
+         <subfield code="c">2017</subfield>
+      </datafield>
+      <datafield tag="300" ind1=" " ind2=" ">
+         <subfield code="a">1 jeu dans une boîte</subfield>
+      </datafield>
+      <datafield tag="336" ind1=" " ind2=" ">
+         <subfield code="b">tdf</subfield>
+         <subfield code="2">rdacontent</subfield>
+      </datafield>
+      <datafield tag="337" ind1=" " ind2=" ">
+         <subfield code="b">n</subfield>
+         <subfield code="2">rdamedia</subfield>
+      </datafield>
+      <datafield tag="338" ind1=" " ind2=" ">
+         <subfield code="b">nr</subfield>
+         <subfield code="2">rdacarrier</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Age min : 14 ans</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Nombre de joueurs·euses : 1-7</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Durée de la partie : 01:30</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Mécanique : Déduction - Enigme</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Interaction : Coopération</subfield>
+      </datafield>
+      <datafield tag="500" ind1=" " ind2=" ">
+         <subfield code="a">Thème : Enigme</subfield>
+      </datafield>
+      <datafield tag="505" ind1="0" ind2=" ">
+         <subfield code="a">boîte du jeu, plastifiée -- 1 plan de Londres -- 3 plans additionnels -- 1 enveloppe contenant 12 indices -- 10 livrets d'enquête -- 10 journaux -- 1 annuaire de Londres -- 1 livret : règles du jeu</subfield>
+      </datafield>
+      <datafield tag="521" ind1=" " ind2=" ">
+         <subfield code="a">Initiation</subfield>
+         <subfield code="9">vdtest/09.2025</subfield>
+      </datafield>
+      <datafield tag="700" ind1="1" ind2=" ">
+         <subfield code="a">Bittler, Bernard</subfield>
+         <subfield code="4">ill</subfield>
+      </datafield>
+      <datafield tag="700" ind1="1" ind2=" ">
+         <subfield code="a">Cauët, Thomas</subfield>
+         <subfield code="4">aut</subfield>
+      </datafield>
+      <datafield tag="700" ind1="1" ind2=" ">
+         <subfield code="a">Demaegd, Arnaud</subfield>
+         <subfield code="4">ill</subfield>
+      </datafield>
+      <datafield tag="700" ind1="1" ind2=" ">
+         <subfield code="a">Edwards, Raymond</subfield>
+         <subfield code="4">aut</subfield>
+      </datafield>
+      <datafield tag="700" ind1="1" ind2=" ">
+         <subfield code="a">Goldberg, Suzanne</subfield>
+         <subfield code="4">aut</subfield>
+      </datafield>
+      <datafield tag="700" ind1="1" ind2=" ">
+         <subfield code="a">Grady, Gary</subfield>
+         <subfield code="4">aut</subfield>
+      </datafield>
+      <datafield tag="700" ind1="1" ind2=" ">
+         <subfield code="a">Neriac, nan</subfield>
+         <subfield code="4">ill</subfield>
+      </datafield>
+      <datafield tag="700" ind1="1" ind2=" ">
+         <subfield code="a">Quidault, Pascal</subfield>
+         <subfield code="4">ill</subfield>
+      </datafield>
+      <datafield tag="972" ind1=" " ind2=" ">
+         <subfield code="a">vdtest</subfield>
+      </datafield>
+      <datafield tag="985" ind1=" " ind2=" ">
+         <subfield code="2">ctest</subfield>
+         <subfield code="a">4</subfield>
+         <subfield code="b">Jeux de Règles</subfield>
+         <subfield code="c">REG. énigme</subfield>
+         <subfield code="9">local</subfield>
+      </datafield>
+      <datafield tag="998" ind1=" " ind2=" ">
+         <subfield code="a">ImportPython/test</subfield>
+      </datafield>
+      <holding_data>
+         <leader>     nx  a22     1n 4500</leader>
+         <datafield tag="852" ind1=" " ind2=" ">
+            <subfield code="b">test</subfield>
+            <subfield code="c">2345</subfield>
+            <subfield code="h">REG. énigme</subfield>
+         </datafield>
+      </holding_data>
+      <item_data>
+         <alternative_call_number>REG. énigme</alternative_call_number>
+         <alternative_call_number_type>8</alternative_call_number_type>
+         <arrival_date>2021-11-18</arrival_date>
+         <barcode>EY3064</barcode>
+         <inventory_date>2022-11-21</inventory_date>
+         <inventory_price>63</inventory_price>
+         <item_location>2345</item_location>
+         <physical_material_type>VIDEOGAME</physical_material_type>
+         <policy>3000</policy>
+         <statistical_note_2>2 nains</statistical_note_2>
+      </item_data>
+   </record>
+</collection>
